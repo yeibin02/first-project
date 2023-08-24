@@ -10,5 +10,5 @@
 
 ## 프로젝트 관련 자료
 
-- Notion : [노션](https://www.notion.so/invite/06dbd24e1470b5c8b810bb7fd987b512f9583f4d)
-- 배포 URL : [배포](https:)
+- Notion : [노션 보기](https://www.notion.so/invite/06dbd24e1470b5c8b810bb7fd987b512f9583f4d)
+- 배포 URL : [배포 보기](https:)
