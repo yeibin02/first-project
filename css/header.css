@@ -1,6 +1,6 @@
 /* 상단 */
 .header {
-  background: #777 
+  background: #fff
 }
 .header .inner {
   width: 100%;
@@ -35,7 +35,7 @@
 }
 .nav .gnb li a {
   font-weight: 600;
-  color: #fff;
+  color: #000;
   font-size: 19px;
   transition: color 0.2s;
 }
