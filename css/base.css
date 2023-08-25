@@ -26,4 +26,9 @@ body{
     background-color: #fffcc9;
     overflow-x: hidden;
     min-width: 480px;
+    word-break: keep-all;
+    line-height: 1.4;
+    letter-spacing: -0.7px;
+    color: #000;
+    font-weight: 400;
 }
