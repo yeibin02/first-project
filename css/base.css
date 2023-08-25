@@ -23,4 +23,7 @@ html{
 body{
     font-family: 'NanumSquareRound';
     font-size: 1rem;
+    background-color: #fffcc9;
+    overflow-x: hidden;
+    min-width: 480px;
 }

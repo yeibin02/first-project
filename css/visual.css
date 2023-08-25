@@ -1,14 +1,14 @@
 .visual {
-  width: 1920px;
-  height: 960px;
+  width: 100%;
+  height: 100vh;
   background-color: #fffcc9;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .visual-border {
-  width: 1840px;
-  height: 860px;
+  width: 95.833333%;
+  height: 89.583333%;
   border: 10px solid #39c283;
   border-radius: 20px;
   margin: 0 auto;
@@ -40,7 +40,7 @@
 }
 .visual-cont {
   background-color: #fff;
-  width: 1520px;
+  width: 82.60869%;
   height: 500px;
   margin: 0 auto;
   text-align: center;
