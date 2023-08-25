@@ -1,3 +1,64 @@
-/* .visual{
-
-} */
+.visual {
+  width: 1920px;
+  height: 960px;
+  background-color: #fffcc9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.visual-border {
+  width: 1840px;
+  height: 860px;
+  border: 10px solid #39c283;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+.visual-title {
+  text-align: center;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+.visual-title h3 {
+  font-size: 73px;
+  color: #39c283;
+  font-family: "yg-jalnan";
+  margin-bottom: 18px;
+}
+.visual-title h3::before{
+    content: "“"; /* 왼쪽 따옴표 */
+}
+.visual-title h3::after {
+    content: "”"; /* 오른쪽 따옴표 */
+  }
+.visual-title p{
+  color: #39c283;
+  font-size: 40px;
+  font-family: "NanumSquareRound";
+}
+.visual-cont {
+  background-color: #fff;
+  width: 1520px;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 35px;
+}
+.visual-cont-1 {
+}
+.visual-cont-1 span {
+  color: #39c283;
+  text-decoration: underline;
+  font-size: 50px;
+  font-weight: 600;
+}
+.visual-cont-2 {
+}
+.visual-cont-2 span {
+  color: #39c283;
+}

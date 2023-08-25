@@ -1,3 +1,15 @@
-/* .vision{
-
-} */
+.vision {
+  width: 1920px;
+  height: 960px;
+  background-color: #fffcc9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vision-border {
+  width: 1840px;
+  height: 860px;
+  border: 10px solid #39c283;
+  border-radius: 20px;
+  margin: 0 auto;
+}
