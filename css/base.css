@@ -23,4 +23,9 @@ html{
 body{
     font-family: 'NanumSquareRound';
     font-size: 1rem;
+    word-break: keep-all;
+    line-height: 1.4;
+    letter-spacing: -0.7px;
+    color: #000;
+    font-weight: 400;
 }
