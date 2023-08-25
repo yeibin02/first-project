@@ -5,7 +5,15 @@
     width: 100%;
     clear: both;
 }
-
+.border {
+  width: 95.833333vw;
+  /* 1840/1960 = 0.9387755102 */
+  height: 89.583333vh;
+  /* 860/960 = 0.8958333333 */
+  border: 10px solid #39c283;
+  border-radius: 20px;
+  margin: 0 auto;
+}
 .inner {
     position: relative;
     width: 96.8776%;
