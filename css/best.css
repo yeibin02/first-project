@@ -1,3 +1,78 @@
-/* .best{
-    
-} */
+/* 비주얼 */
+.best{
+    width: 100%;
+    height: 960px;
+    background-color: #faf8dd;
+}
+.best .inner{
+    width: 1920px;
+    height: 960px;
+}
+.bs-title{
+    font-size: 70px;
+    color: #39c283;
+    font-family: 'yg-jalnan';
+    margin-left: 80px;
+    margin-top: 20px;
+}
+/* swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.best-box {
+    width: 100%;
+    height: 100%;
+}
+.best-bg-1 {
+    background: url("../images/main_visual_1.jpg") no-repeat center;
+    background-size:  400px , 400px;
+}
+.best-bg-2 {
+    background: url("../images/main_visual_2.jpg") no-repeat center;
+    background-size: 400px , 400px;
+}
+.best-bg-3 {
+    background: url("../images/main_visual_3.jpg") no-repeat center;
+    background-size: 400px , 400px;
+}
+
+/* sw-visual 콘트롤 */
+.sw-best-control {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(50% - 20px);
+    top: 45% ;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1820px;
+    z-index: 9;
+}
+.sw-best-control button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #fff;
+}
+.sw-best-control button i {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    color: #000;
+    font-weight: 800;
+    font-size: 20px;
+}
+.sw-best-control button:hover i {
+    opacity: 1;
+}
+.sw-best-control button .xi-angle-right{
+    margin-right: -3px;
+}
