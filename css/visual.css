@@ -3,105 +3,67 @@
     position: relative;
     display: block;
     width: 100%;
-    height: 960px;
+    height: 860px;
 }
 .visual .inner {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-    height: 960px;
+    height: 860px;
 }
 /* Swiper */
 .swiper {
     width: 100%;
     height: 100%;
-    }
+}
 .visual-box {
     width: 100%;
     height: 100%;
-    }
+}
 .visual-bg-1 {
     background: url("../images/slide1.png") no-repeat center;
-    background-size: 1920px , 960px;
-    }
+    background-size: cover;
+}
 .visual-bg-2 {
     background: url("../images/slide2.png") no-repeat center;
-    background-size: 1920px , 960px;
-    }
+    background-size: cover;
+}
 /* sw-visual 콘트롤 */
 .sw-visual-control {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: calc(50% - 230px);
+    /* top: calc(50% - 20px); */
     top: 45% ;
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    max-width: 1420px;
+    max-width: 1820px;
     z-index: 9;
-    }
+}
 .sw-visual-control button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60px;
     height: 60px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
     border: 0;
     border-radius: 50%;
     cursor: pointer;
     margin-right: 10px;
     color: #fff;
-    }
+}
 .sw-visual-control button i {
     opacity: 0.5;
     transition: opacity 0.3s;
-    }
+    color: #000;
+    font-weight: 800;
+    font-size: 20px;
+}
 .sw-visual-control button:hover i {
     opacity: 1;
-    }
-.sw-visual-pg {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: calc(50% + 230px);
-    width: 100%;
-    max-width: 1420px;
-    z-index: 9;
-    }
-.sw-visual-pg-list {
-    position: relative;
-    display: flex;
-    }
-.sw-visual-pg-list > li {
-    position: relative;
-    width: 85px;
-    font-size: 14px;
-    padding: 10px 10px;
-    color: #fff;
-    font-weight: 400;
-    cursor: pointer;
-    }
-.sw-visual-pg-list > li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    opacity: 0.4;
-    }
-.sw-visual-pg-list > li::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: #fff;
-    }
-.sw-visual-pg-list > li.active::after {
-    transition: width 1.5s;
-    width: 100% !important;
-    }
+}
+.sw-visual-control button .xi-angle-right{
+    margin-right: -3px;
+}
