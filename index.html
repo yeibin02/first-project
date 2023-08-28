@@ -55,6 +55,15 @@
         <!-- css 초기화 -->
         <link rel="stylesheet" href="css/reset.css">
 
+        <!-- Swiper Js -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        
+        <!-- Link Swiper's css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+        <!-- xeicon -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+
         <!-- IE 6~8 버전에서 미디어쿼리를 해석할 수 있도록 만들어줌 -->
         <!-- <script src="js/respond.min.js"></script> -->
 
@@ -99,7 +108,7 @@
             <div class="inner">
                 <!-- 로고 -->
                 <a class="logo" href="index.html" alt="지확행 : 지구를 지키는 확실한 행동">
-                    <img src="images/logo.png" alt="지확행">
+                    <img src="images/logo2.png" alt="지확행">
                 </a>
                 <!-- 메뉴 -->
                 <nav class="nav">
@@ -113,15 +122,42 @@
         </header>
 
         <!-- 비주얼 -->
-        <seciton class="visual">
+        <section class="visual">
             <div class="inner">
-                <img src="images/slide.png" alt="슬라이드">
+            <!-- Swiper -->
+            <div class="swiper sw-visual">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="visual-box visual-bg-1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="visual-box visual-bg-2">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </seciton>
+            <!--sw-visual 콘트롤  -->
+            <div class="sw-visual-control">
+                <button class="sw-visual-prev">
+                    <i class="xi-angle-left"></i>
+                </button>
+                <button class="sw-visual-next">
+                    <i class="xi-angle-right"></i>
+                </button>
+            </div>
+            <!-- sw-visual 페이지네이션 -->
+            <div class="sw-visual-pg">
+                <ul class="sw-visual-pg-list">
+                    <!-- js출력 -->
+                </ul>
+            </div>
+            </div>
+        </section>
         
         <!-- 비전 -->
         <section class="vision">
-            <!-- vision0 -->
+        <!-- vision1 -->
         <div class="vision-1">
                 <div class="inner">
                     <div class="vision-1-title">
@@ -143,8 +179,9 @@
                     </div>
                 </div>
         </div>
+        <!-- vision2 -->
         <div class="vision-2">
-                <div class="inner"></div>
+            <div class="inner"></div>
         </div>
         </section>
 
