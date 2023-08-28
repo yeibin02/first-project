@@ -25,6 +25,7 @@ body{
     font-size: 1rem;
     background-color: #fffcc9;
     overflow-x: hidden;
+    /* overflow-y: hidden; */
     min-width: 480px;
     word-break: keep-all;
     line-height: 1.4;
