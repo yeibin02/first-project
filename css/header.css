@@ -14,11 +14,11 @@
 }
 .logo img {
   width: 60px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .nav {
   height: 100%;
-  margin-right: 230px;
+  margin-right: 20px;
 }
 .nav .gnb {
   display: flex;
@@ -68,7 +68,7 @@
   color: #39c283 !important;
 }
 
-@media all and (max-width: 1920px) {
+/* @media all and (max-width: 1920px) {
 }
 @media all and (max-width: 1680px) {
 }
@@ -79,4 +79,4 @@
 @media all and (max-width: 760px) {
 }
 @media all and (max-width: 480px) {
-}
+} */
