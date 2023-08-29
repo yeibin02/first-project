@@ -1,7 +1,7 @@
 // dom (html 태그 로딩 완료 후 실행)
 $(document).ready(function () {
   // 각 섹션의 위치값(세로스크롤 위치)
-  const sectionYpos = [500, 1000, 1500, 2000, 3500];
+  const sectionYpos = [960, 1920, 2880];
 
   // 클래스 nav 의 li 를 찾아라
   // 저장한다. 재활용하기 위해서
