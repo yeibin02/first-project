@@ -1,40 +1,34 @@
-.vision {
+.vision-1 {
   width: 100%;
   height: 960px;
-  background-color: #fffcc9;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  /* justify-content: center; */
-  align-items: center;
 }
 
 /* vision-1 */
-.vision-1-title{
+.vision-1-title {
   text-align: center;
   height: 250px;
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
+  padding-top: 60px;
 }
-.vision-1-title h3{
+.vision-1-title h3 {
   font-size: 73px;
   color: #39c283;
-  font-family: 'yg-jalnan';
+  font-family: "yg-jalnan";
 }
-.vision-1-title h3::before{
-    content: "“"; /* 왼쪽 따옴표 */
+.vision-1-title h3::before {
+  content: "“"; /* 왼쪽 따옴표 */
 }
 .vision-1-title h3::after {
-    content: "”"; /* 오른쪽 따옴표 */
-  }
-.vision-1-title p{
-  color: #39c283;
+  content: "”"; /* 오른쪽 따옴표 */
+}
+.vision-1-title p {
+  color: #000;
   font-size: 40px;
   font-family: "NanumSquareRound";
 }
 .vision-1-cont {
-  background-color: #fff;
+  background-color: #f7ffef;
   width: 100%;
   height: 500px;
   margin: 0 auto;
@@ -43,6 +37,7 @@
   flex-direction: column;
   justify-content: space-around;
   font-size: 35px;
+  border-radius: 100px;
 }
 /* .vision-1-cont-1 {
 } */
@@ -59,4 +54,8 @@
 }
 
 /* vision-2 */
-
+.vision-2 {
+  width: 100%;
+  height: 960px;
+  background: hotpink;
+}
