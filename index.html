@@ -123,6 +123,8 @@
 
     <!-- jquery 적용 -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+
 
     <!-- script 불러오기 -->
     <script src="js/script.js"></script>
@@ -142,6 +144,7 @@
     <script src="js/footer.js"></script>
 
     <!-- css 불러오기 -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -149,8 +152,9 @@
     <div class="fix-menu"></div>
 
     <!-- 레이아웃 -->
-    <div class="wrap">
+    <div class="wrap" id="fullpage">
       <!-- 상단 -->
+      <div class="section">
       <header class="header">
         <div class="inner"> 
           <!-- 로고 -->
@@ -186,12 +190,11 @@
               </div>
             </div>
         </section>
-        
+        </div>
         <!-- 비전 -->
-        <section class="vision">
+            <div class="vision-1 section">
             <div class="inner">
             <!-- vision1 -->
-            <div class="vision-1">
                 <div class="vision-1-title">
                     <h3>지확행</h3>
                     <p>지구를 지키는 확실한 행동</p>
@@ -210,15 +213,14 @@
                     </p>
                 </div>
             </div>
-        </div>
+            </div>
         <!-- vision2 -->
-        <div class="vision-2">
+        <div class="vision-2 section">
 
         </div>
-        </section>
 
         <!-- 베스트상품 -->
-        <section class="best">
+        <section class="best section">
             <div class="inner">
                 <h2 class="best-title">지확행 BEST</h2>
                 <!-- Swiper -->
@@ -243,7 +245,7 @@
         </section>
 
         <!-- 굿즈상품 -->
-        <section class="goods">
+        <section class="goods section">
             <div class="inner">
                 <h2 class="goods-title">뉴진스 PICK!</h2>
                 <!-- Swiper -->
@@ -259,22 +261,22 @@
         </section>
 
         <!-- 임팩트 -->
-        <section class="impact">
+        <section class="impact section">
             <div class="inner"></div>
         </section>
 
         <!-- 뉴스 -->
-        <section class="news">
+        <section class="news section">
             <div class="inner"></div>
         </section>
 
         <!-- 이벤트 -->
-        <section class="event">
+        <section class="event section">
             <div class="inner"></div>
         </section>
 
         <!-- 하단 -->
-        <footer class="footer">
+        <footer class="footer section">
             <div class="inner"></div>
         </footer>
     </div>
