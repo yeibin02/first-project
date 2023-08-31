@@ -126,6 +126,7 @@
 
     <!-- text 타이핑 효과 -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
 
     <!-- section.js -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -148,9 +149,6 @@
   </head>
 
   <body>
-    <script>
-      AOS.init();
-    </script>
     <!-- 고정메뉴 -->
     <div class="fix-menu"></div>
 
@@ -193,10 +191,19 @@
             </div>
           </div>
         </div>
+        <!--sw-best 콘트롤  -->
+        <div class="sw-visual-control">
+          <button class="sw-visual-prev">
+            <i class="xi-angle-left"></i>
+          </button>
+          <button class="sw-visual-next">
+            <i class="xi-angle-right"></i>
+          </button>
+        </div>
       </section>
 
       <!-- 비전 -->
-      <div class="vision-1 section">
+      <section class="vision-1 section">
         <div class="inner">
           <!-- vision1 -->
           <div class="vision-1-title">
@@ -218,8 +225,13 @@
               그리고 재사용, 재활용을 통해 자원을 보존하는 것을 뜻해요.
             </p>
           </div>
+          <!-- 하단로고 -->
+          <div class="bottom-logo">
+            <img src="images/bottom_logo.png" alt="하단로고" />
+          </div>
         </div>
       </div>
+      </section>
       <div class="vision-2 section">
         <div class="vision-2-title">
             <h3>지확행의 3원칙</h3>
@@ -237,8 +249,9 @@
             <div class="sw-best-slide-box-1"></div>
             <div class="sw-best-slide-box-1"></div>
           </div>
-          <div class="under-logo">
-            <img src="" alt="" />
+          <!-- 하단로고 -->
+          <div class="bottom-logo">
+            <img src="images/bottom_logo.png" alt="하단로고" />
           </div>
         </div>
         <!--sw-best 콘트롤  -->
@@ -270,6 +283,10 @@
           <div class="under-logo">
             <img src="" alt="" />
           </div>
+          <!-- 하단로고 -->
+          <div class="bottom-logo">
+            <img src="images/bottom_logo.png" alt="하단로고" />
+          </div>
         </div>
       </section>
 
@@ -283,14 +300,21 @@
               <img src="" alt="" />
             </div>
           </div>
-          <div class="under-logo"></div>
-          <img src="" alt="" />
+          <!-- 하단로고 -->
+          <div class="bottom-logo">
+            <img src="images/bottom_logo.png" alt="하단로고" />
+          </div>
         </div>
       </section>
 
       <!-- 뉴스 -->
       <section class="news section">
-        <div class="inner"></div>
+        <div class="inner">
+          <!-- 하단로고 -->
+          <div class="bottom-logo">
+            <img src="images/bottom_logo.png" alt="하단로고" />
+          </div>
+        </div>
       </section>
 
       <!-- 이벤트 -->
@@ -304,6 +328,7 @@
       </footer>
     </div>
   </body>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript
     ><iframe
@@ -313,5 +338,9 @@
       style="display: none; visibility: hidden"
     ></iframe
   ></noscript>
+
   <!-- End Google Tag Manager (noscript) -->
 </html>
+<script>
+  AOS.init();
+</script>
