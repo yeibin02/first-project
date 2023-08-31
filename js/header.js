@@ -19,7 +19,7 @@ $(document).ready(function () {
       event.preventDefault();
       // li 의 모든 클래스 제거
       // navLis.removeClass("focus-active");
-      // // 클릭된 li 에 focus-active 추가하기
+      // 클릭된 li 에 focus-active 추가하기
       // navLis.eq(index).addClass("focus-active");
       // 2. 클릭하면 스크롤바가 움직인다.
       $("html, body").animate(
