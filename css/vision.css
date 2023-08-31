@@ -10,6 +10,11 @@
   display: flex;
   flex-direction: column;
   padding-top: 60px;
+  animation: vTitle 2s;
+}
+@keyframes vTitle{
+  0%{opacity: 0;}
+  100%{opacity: 0;}
 }
 .vision-1-title h3 {
   font-size: 73px;
