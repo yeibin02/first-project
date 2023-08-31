@@ -67,7 +67,7 @@ $(document).ready(function () {
     }
 
     scrollIng = true;
-    console.log("마우스가 휠 되요~~~ 하고 싶은 일 해요.");
+    // console.log("마우스가 휠 되요~~~ 하고 싶은 일 해요.");
 
     if (distance < 0) {
       sectionIndex++;
