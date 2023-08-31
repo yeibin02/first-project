@@ -12,3 +12,12 @@
     border-bottom: solid 1px #000; /* 구분용 선 마지막에 없애기*/
     margin: 0 auto;
 }
+.fix-menu{
+    position: fixed;
+    width: 80px;
+    height: auto;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
