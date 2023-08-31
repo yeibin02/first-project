@@ -9,14 +9,6 @@
     align-items: center;
     position: relative;
 }
-.goods-title{
-    width: 450px;
-    height: 100px;
-    font-size: 70px;
-    color: #39c283;
-    font-family: 'yg-jalnan';
-    margin: 50px 0;
-}
 .sw-goods{
     width: 1460px;
     position: relative;
