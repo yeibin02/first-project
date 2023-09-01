@@ -69,9 +69,10 @@
 }
 .vision-2 img{
   position: absolute;
-  top: 50%;
-  left: -150px;
-  scale: 1.5;
+  top: 30%;
+  left: -500px;
+  scale: 1;
+  transform: rotate(30deg);
 }
 .vision-2-title h3 {
   font-size: 73px;
