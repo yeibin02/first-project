@@ -431,50 +431,59 @@
 
       <!-- 이벤트 -->
       <section class="event section">
-        <!-- modal -->
-        <div class="modal hidden">
-          <div class="bg"></div>
-          <div id="modal" class="modal-overlay">
-            <div class="modal-window">
-              <div class="title">
-                <h2>개인정보수집</h2>
+        <div class="bg"></div>
+        <div class="event-inner">
+          <!-- modal -->
+          <div class="modal hidden">
+            <div id="modal" class="modal-overlay">
+              <div class="modal-window">
+                <div class="title">
+                  <h2>개인정보수집</h2>
+                </div>
+                <div class="close-area">X</div>
+                <div id="container">
+                  <form action="#" id="register">
+                    <ul id="user-info">
+                      <li>
+                        <label for="user-id" class="field">인스타 아이디</label>
+                        <input type="text" id="user-id" required />
+                      </li>
+                      <li>
+                        <label for="email" class="field">이메일</label>
+                        <input type="email" id="email" required />
+                      </li>
+                    </ul>
+                    <ul id="buttons">
+                      <li>
+                        <button
+                          type="submit"
+                          class="btn btnBlack"
+                          id="complete"
+                        >
+                          완료
+                        </button>
+                      </li>
+                      <li>
+                        <button type="reset" class="btn btnGray" id="cancel">
+                          취소
+                        </button>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+                <p class="notice-text">
+                  * 이벤트 경품 추첨 알림을 위하여 수집하는 정보입니다.
+                </p>
               </div>
-              <div class="close-area">X</div>
-              <div id="container">
-                <form action="#" id="register">
-                  <ul id="user-info">
-                    <li>
-                      <label for="user-id" class="field">인스타 아이디</label>
-                      <input type="text" id="user-id" required />
-                    </li>
-                    <li>
-                      <label for="email" class="field">이메일</label>
-                      <input type="email" id="email" required />
-                    </li>
-                  </ul>
-                  <ul id="buttons">
-                    <li>
-                      <button type="submit" class="btn btnBlack" id="complete">
-                        완료
-                      </button>
-                    </li>
-                    <li>
-                      <button type="reset" class="btn btnGray" id="cancel">
-                        취소
-                      </button>
-                    </li>
-                  </ul>
-                </form>
-              </div>
-              <p class="notice-text">
-                * 이벤트 경품 추첨 알림을 위하여 수집하는 정보입니다.
-              </p>
+            </div>
+            <div class="event-img-wrap">
+              <img
+                src="images/campaign_event.png"
+                alt="캠페인 이벤트 참여방법"
+              />
+              <button id="openBtn">참여하기</button>
             </div>
           </div>
-        </div>
-        <div class="event-img-wrap">
-          <img src="images/campaign_event.png" alt="캠페인 이벤트 참여방법" />
-          <button id="openBtn">참여하기</button>
         </div>
       </section>
 
