@@ -2,13 +2,13 @@
 $(document).ready(function () {
 const swVisual = new Swiper(".sw-visual", {
   loop: true,
-  speed: 1000,
+  speed: 1500,
   navigation: {
     prevEl: ".sw-visual-prev",
     nextEl: ".sw-visual-next",
   },
   autoplay: {
-    delay: 3000,
+    delay: 4500,
     disableOnInteraction: false,
   },
 });
