@@ -14,6 +14,26 @@
 // };
 // // dom (html 태그 로딩 완료 후 실행)
 $(document).ready(function () {
+  // 지구 돌리기
+  const visionImg = $(".vision-2 img");
+  // 지구 돌리기 텍스 효과
+  const vision2Interval = 5000; // 1000 은 1초, 1s
+  const vision2conts = $(".vision-2-cont > div");
+  const vision2contsTotal = vision2conts.length;
+  let vision2Index = 0;
+  vision2conts.eq(vision2Index).show();
+
+  function showVision2Text() {
+    vision2Index++;
+    if (vision2Index >= vision2contsTotal) {
+      vision2Index = 0;
+    }
+    vision2conts.hide();
+    vision2conts.eq(vision2Index).show();
+  }
+
+  let vision2Timer;
+
   // 마우스 휠 이동(PC 버전)
 
   // 1. section 을 저장한다.
@@ -81,21 +101,7 @@ $(document).ready(function () {
       }
     }
 
-    // 화면을 이동시킨다.
-    $("html")
-      .stop()
-      .animate(
-        {
-          scrollTop: sectionPos[sectionIndex],
-        },
-        sectionSpeed,
-        function () {
-          // 애니메이션이 완료되었다.
-          // 다시 스크롤 이벤트를 받겠다.
-          scrollIng = false;
-        }
-      );
-
+    goSlideHome(sectionPos[sectionIndex]);
     // gsap.to($("html"), 0.5, {
     //   scrollTo: sectionPos[sectionIndex],
     //   onComplete: function () {
@@ -103,6 +109,39 @@ $(document).ready(function () {
     //   },
     // });
   });
+
+  // 화면을 이동하는 함수
+  function goSlideHome(_num) {
+    // 화면을 이동시킨다.
+    $("html")
+      .stop()
+      .animate(
+        {
+          scrollTop: _num,
+        },
+        sectionSpeed,
+        function () {
+          // 애니메이션이 완료되었다.
+          // 다시 스크롤 이벤트를 받겠다.
+          scrollIng = false;
+          // 지구본 돌리기
+          if (sectionIndex === 2) {
+            visionImg.addClass("img-active");
+            vision2Index = 0;
+            vision2conts.hide();
+            vision2conts.eq(vision2Index).show();            
+            clearInterval(vision2Timer);
+            vision2Timer = setInterval(showVision2Text, vision2Interval);
+          } else {
+            visionImg.removeClass("img-active");
+            vision2Index = 0;
+            clearInterval(vision2Timer);
+          }
+        }
+      );
+  }
+  // 최초 1번은 즉, 새로고침 등등의 작업시
+  goSlideHome(0);
 });
 // // 멀티미디어 리소스 로딩 완료 후 실행
 // window.onload = function(){}
