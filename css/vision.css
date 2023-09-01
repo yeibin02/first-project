@@ -101,7 +101,11 @@
   font-family: "yg-jalnan";
 }
 
+<<<<<<< HEAD
 .vision-2-cont {
+=======
+.vision-2-cont{
+>>>>>>> ceae7d828b4547e93e277efef8d6dd755bc59bdd
   position: absolute;
   top: 40%;
   left: 45%;
@@ -110,6 +114,7 @@
   height: 500px;
   overflow: hidden;
 }
+<<<<<<< HEAD
 .vision-2-cont > div {
   display: none;
 }
@@ -122,6 +127,20 @@
   height: 500px;
 }
 .vision-2-cont-3 {
+=======
+.vision-2-cont-1{
+  
+  width: 900px;
+  height: 500px;
+}
+.vision-2-cont-2{
+  
+  width: 900px;
+  height: 500px;
+}
+.vision-2-cont-3{
+  
+>>>>>>> ceae7d828b4547e93e277efef8d6dd755bc59bdd
   width: 900px;
   height: 500px;
 }
