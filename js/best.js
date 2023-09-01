@@ -1,10 +1,17 @@
-// // 비주얼 슬라이드 기능
-// $(document).ready(function () {
-//   const swBest = new Swiper(".sw-best", {
-//     loop: true,
-//     navigation: {
-//       prevEl: ".sw-best-prev",
-//       nextEl: ".sw-best-next",
-//     },
-//   });
-// });
+$(document).ready(function () {
+  var swiper = new Swiper(".best-slide", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+});
