@@ -49,7 +49,7 @@
     display: block;
     width: 700px;
     height: 620px;
-    background: url("../images/news_img1.png") no-repeat center;
+    background: url("../images/news_img1.jpg") no-repeat center;
     background-size: cover;
     transition: all 0.5s;
     border-radius: 10px;

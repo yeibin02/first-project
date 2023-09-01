@@ -45,33 +45,73 @@ $(document).ready(function () {
   textElement.innerHTML = contentData[currentIndex].text;
   // textElement.innerHTML = `우리가 함께 순환한 <span class="text-bold">유리병</span>의 개수는 <span>140</span>개!`;
 
+  // contentElement.addEventListener("wheel", (event) => {
+  //   if (!scrollLocked) {
+  //     scrollLocked = true;
+
+  //     // 스크롤 휠 델타 값 계산
+  //     const deltaY = event.deltaY;
+
+  //     // 스크롤 방향에 따라 인덱스 증가 또는 감소
+  //     if (deltaY > 0) {
+  //       currentIndex = (currentIndex + 1) % contentData.length;
+  //     } else {
+  //       currentIndex =
+  //         (currentIndex - 1 + contentData.length) % contentData.length;
+  //     }
+
+  //     // 현재 인덱스에 기반하여 이미지와 텍스트 업데이트
+  //     imageElement.src = contentData[currentIndex].image;
+  //     textElement.innerHTML = contentData[currentIndex].text;
+  //     // console.log(contentData[currentIndex].text);
+  //     // textElement.innerHTML = contentData[currentIndex].text;
+
+  //     // 빠른 변경을 방지하기 위해 스크롤 잠금
+  //     setTimeout(() => {
+  //       scrollLocked = false;
+  //     }, 1000); // 필요에 따라 딜레이 시간 조정
+  //   }
+
+  //   // 기본 스크롤 동작 방지
+  //   event.preventDefault();
+  // });
   contentElement.addEventListener("wheel", (event) => {
     if (!scrollLocked) {
       scrollLocked = true;
-
-      // 스크롤 휠 델타 값 계산
+  
       const deltaY = event.deltaY;
-
-      // 스크롤 방향에 따라 인덱스 증가 또는 감소
+  
       if (deltaY > 0) {
         currentIndex = (currentIndex + 1) % contentData.length;
       } else {
         currentIndex =
           (currentIndex - 1 + contentData.length) % contentData.length;
       }
-
-      // 현재 인덱스에 기반하여 이미지와 텍스트 업데이트
-      imageElement.src = contentData[currentIndex].image;
-      textElement.innerHTML = contentData[currentIndex].text;
-      // console.log(contentData[currentIndex].text);
-      // textElement.innerHTML = contentData[currentIndex].text;
-
-      // 빠른 변경을 방지하기 위해 스크롤 잠금
+  
+      // 이미지와 텍스트에 트랜지션 효과를 적용
+      imageElement.style.opacity = 0;
+      textElement.style.opacity = 0;
+      textElement.style.transform = "translateY(0px)";
+  
+      // 스타일 변경 후 트랜지션 완료 후에 내용 업데이트
       setTimeout(() => {
-        scrollLocked = false;
-      }, 1000); // 필요에 따라 딜레이 시간 조정
+        imageElement.src = contentData[currentIndex].image;
+        textElement.innerHTML = contentData[currentIndex].text;
+  
+        // 트랜지션 효과 재생
+        requestAnimationFrame(() => {
+          imageElement.style.opacity = 1;
+          textElement.style.opacity = 1;
+          textElement.style.transform = "translateY(0)";
+        });
+  
+        // 스크롤 잠금 해제
+        setTimeout(() => {
+          scrollLocked = false;
+        }, 200); // 필요에 따라 딜레이 시간 조정
+      }, 500); // 트랜지션 시간에 맞게 설정 (이 경우 0.5초)
     }
-
+  
     // 기본 스크롤 동작 방지
     event.preventDefault();
   });

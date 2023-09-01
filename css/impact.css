@@ -41,7 +41,7 @@
     margin-bottom: 100px;
     flex-direction: column;
 }
-.impact-card a{
+.impact-image-icon{
     position: relative;
     width: 200px;
     height: 200px;
@@ -62,4 +62,14 @@
     font-size: 40px;
     font-weight: 700;
     color: #5C5B5B;
+}
+/* 이미지와 텍스트가 트랜지션 효과를 가지도록 CSS 스타일을 추가합니다. */
+#impact-image {
+    /* 예시: 투명도(Opacity) 변경에 대한 트랜지션 설정 */
+    transition: opacity 0.5s ease-in-out; 
+}
+
+#impact-text {
+    /* 예시: 투명도(Opacity) 변경에 대한 트랜지션 설정 */
+    transition: opacity 0.5s ease-in-out; 
 }

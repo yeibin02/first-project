@@ -9,7 +9,6 @@
     position: relative;
     width: 1460px;
     height: 960px;
-    border-bottom: solid 1px #000; /* 구분용 선 마지막에 없애기*/
     margin: 0 auto;
 }
 /* .fix-menu{
