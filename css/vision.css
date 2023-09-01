@@ -12,9 +12,13 @@
   padding-top: 60px;
   animation: vTitle 2s;
 }
-@keyframes vTitle{
-  0%{opacity: 0;}
-  100%{opacity: 0;}
+@keyframes vTitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .vision-1-title h3 {
   font-size: 70px;
@@ -67,12 +71,29 @@
   text-align: center;
   padding-top: 60px;
 }
-.vision-2 img{
+.vision-2 img {
   position: absolute;
   top: 30%;
   left: -500px;
   scale: 1;
   transform: rotate(30deg);
+  /* transition: transform 0.5s; */
+  /* animation: earthAni 1s ease 0 infinite; */
+}
+.vision-2 .img-active {
+  animation: earthAni 15s infinite;
+}
+
+@keyframes earthAni {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-210deg);
+  }
+  100% {
+    transform: rotate(-390deg);
+  }
 }
 .vision-2-title h3 {
   font-size: 73px;
@@ -80,7 +101,11 @@
   font-family: "yg-jalnan";
 }
 
+<<<<<<< HEAD
+.vision-2-cont {
+=======
 .vision-2-cont{
+>>>>>>> ceae7d828b4547e93e277efef8d6dd755bc59bdd
   position: absolute;
   top: 40%;
   left: 45%;
@@ -89,6 +114,20 @@
   height: 500px;
   overflow: hidden;
 }
+<<<<<<< HEAD
+.vision-2-cont > div {
+  display: none;
+}
+.vision-2-cont-1 {
+  width: 900px;
+  height: 500px;
+}
+.vision-2-cont-2 {
+  width: 900px;
+  height: 500px;
+}
+.vision-2-cont-3 {
+=======
 .vision-2-cont-1{
   
   width: 900px;
@@ -101,6 +140,7 @@
 }
 .vision-2-cont-3{
   
+>>>>>>> ceae7d828b4547e93e277efef8d6dd755bc59bdd
   width: 900px;
   height: 500px;
 }

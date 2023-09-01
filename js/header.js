@@ -29,8 +29,6 @@ window.addEventListener("load", function () {
     }
   });
 
-
-  
   // 모바일 메뉴 클릭 처리
   const htmlRoot = document.querySelector("html");
   const navMb = document.querySelector(".nav-mb");
@@ -59,8 +57,6 @@ window.addEventListener("load", function () {
     }
   });
 
-
-
   // 반응형 처리
   let winW = window.innerWidth;
   window.addEventListener("resize", function () {
@@ -83,8 +79,6 @@ window.addEventListener("load", function () {
     }
   });
 
-
-
   // 선택자로 로고와 스크롤 위치를 가져옵니다.
   const logo = document.querySelector(".logo");
   const scrollPosition = 200; // 로고가 이동할 스크롤 위치
@@ -101,24 +95,19 @@ window.addEventListener("load", function () {
     }
   });
 
-
-
   // 스크롤 했을 때 gnb 삭제
   const gnb = document.querySelector(".gnb"); // gnb 메뉴를 감싸는 요소 선택자
   // let prevScrollPos = window.pageYOffset; // 이전 스크롤 위치 초기화
   window.addEventListener("scroll", () => {
     const scrollTop = window.pageYOffset; // 현재 스크롤 위치
     if (scrollTop === 0) {
-      gnb.style.transform = 'translateY(0)';
+      gnb.style.transform = "translateY(0)";
     } else {
-      gnb.style.transform = 'translateY(-100%)'; // 스크롤 내릴 때 gnb 숨기기
+      gnb.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 gnb 숨기기
     }
-    prevScrollPos = currentScrollPos; // 이전 스크롤 위치 업데이트
+    // prevScrollPos = currentScrollPos; // 이전 스크롤 위치 업데이트
   });
-
 });
-
-
 
 // dom (html 태그 로딩 완료 후 실행)
 $(document).ready(function () {
