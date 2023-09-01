@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+$(document).ready(function () {
   // 상단 스크롤 기능
   const header = document.querySelector(".header");
   const mbt = document.querySelector(".mbt");
@@ -10,24 +10,43 @@ window.addEventListener("load", function () {
     header.classList.add("active");
     mbt.classList.add("active");
   }
-  window.addEventListener("scroll", function () {
-    scy = this.document.documentElement.scrollTop;
-    if (scy > 0) {
-      header.classList.add("active");
-      mbt.classList.add("active");
-    } else {
-      const state = navMb.classList.contains("active");
-      if (state) {
-        // 만약에 모바일 메뉴가 펼쳐진 상태라면
+  window.addEventListener(
+    "scroll",
+    function () {
+      scy = this.document.documentElement.scrollTop;
+      if (scy > 0) {
         header.classList.add("active");
         mbt.classList.add("active");
       } else {
-        // 그렇지 않다면 원래대로 처리하고..
-        header.classList.remove("active");
-        mbt.classList.remove("active");
+        const state = navMb.classList.contains("active");
+        if (state) {
+          // 만약에 모바일 메뉴가 펼쳐진 상태라면
+          header.classList.add("active");
+          mbt.classList.add("active");
+        } else {
+          // 그렇지 않다면 원래대로 처리하고..
+          header.classList.remove("active");
+          mbt.classList.remove("active");
+        }
       }
-    }
-  });
+
+      // 현재 스크롤 위치를 가져옵니다.
+      const currentScroll = window.scrollY;
+      // 스크롤 위치가 지정한 위치보다 크거나 같을 때 로고 위치를 변경합니다.
+      if (currentScroll >= scrollPosition) {
+        logo.classList.add("logo-scrolled"); // CSS 클래스 추가
+      } else {
+        logo.classList.remove("logo-scrolled"); // CSS 클래스 제거
+      }
+      const scrollTop = window.pageYOffset; // 현재 스크롤 위치
+      if (scrollTop === 0) {
+        gnb.style.transform = "translateY(0)";
+      } else {
+        gnb.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 gnb 숨기기
+      }
+    },
+    { passive: true }
+  );
 
   // 모바일 메뉴 클릭 처리
   const htmlRoot = document.querySelector("html");
@@ -83,34 +102,14 @@ window.addEventListener("load", function () {
   const logo = document.querySelector(".logo");
   const scrollPosition = 200; // 로고가 이동할 스크롤 위치
 
-  // 스크롤 이벤트 리스너를 추가합니다.
-  window.addEventListener("scroll", () => {
-    // 현재 스크롤 위치를 가져옵니다.
-    const currentScroll = window.scrollY;
-    // 스크롤 위치가 지정한 위치보다 크거나 같을 때 로고 위치를 변경합니다.
-    if (currentScroll >= scrollPosition) {
-      logo.classList.add("logo-scrolled"); // CSS 클래스 추가
-    } else {
-      logo.classList.remove("logo-scrolled"); // CSS 클래스 제거
-    }
-  });
 
   // 스크롤 했을 때 gnb 삭제
   const gnb = document.querySelector(".gnb"); // gnb 메뉴를 감싸는 요소 선택자
   // let prevScrollPos = window.pageYOffset; // 이전 스크롤 위치 초기화
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.pageYOffset; // 현재 스크롤 위치
-    if (scrollTop === 0) {
-      gnb.style.transform = "translateY(0)";
-    } else {
-      gnb.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 gnb 숨기기
-    }
-    // prevScrollPos = currentScrollPos; // 이전 스크롤 위치 업데이트
-  });
+
 });
 
 // dom (html 태그 로딩 완료 후 실행)
-$(document).ready(function () {
   // 각 섹션의 위치값(세로스크롤 위치)
   const sectionYpos = [960, 1920, 7680];
 
@@ -141,4 +140,3 @@ $(document).ready(function () {
       );
     });
   });
-});

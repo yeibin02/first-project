@@ -20,13 +20,12 @@
   background: url("../images/main_logo.png") no-repeat center;
   background-size: 200px auto;
   transition: all 0.5s;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
 }
 /* 스크롤 시 로고 위치 변경된 스타일 */
-.logo-scrolled {
-  transition: 2s;
-  transform: translate(780px , 850px);
 
-}
 .nav {
   display: block;
 }
