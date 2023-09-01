@@ -29,6 +29,7 @@ $(document).ready(function () {
           mbt.classList.remove("active");
         }
       }
+
       // 현재 스크롤 위치를 가져옵니다.
       const currentScroll = window.scrollY;
       // 스크롤 위치가 지정한 위치보다 크거나 같을 때 로고 위치를 변경합니다.
@@ -101,9 +102,11 @@ $(document).ready(function () {
   const logo = document.querySelector(".logo");
   const scrollPosition = 200; // 로고가 이동할 스크롤 위치
 
+
   // 스크롤 했을 때 gnb 삭제
   const gnb = document.querySelector(".gnb"); // gnb 메뉴를 감싸는 요소 선택자
   // let prevScrollPos = window.pageYOffset; // 이전 스크롤 위치 초기화
+
 });
 
 // dom (html 태그 로딩 완료 후 실행)
