@@ -4,6 +4,11 @@ $(document).ready(function () {
   gotop.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+  
+  //footer 영역에 왔을 때 탑 버튼 없애기
+  gotop.addEventListener("mousewheel", function (){
+    window.scrollTo
+  })
 });
 
 // $(document).ready(function () {
