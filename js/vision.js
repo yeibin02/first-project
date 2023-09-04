@@ -22,10 +22,6 @@ $(document).ready(function () {
     }
   }
 
-  // .vision-1-cont에 wheel 이벤트 핸들러 추가
-  vision1.addEventListener("wheel", handleWheelEvent);
-});
-
 $(document).ready(function () {
   let rotationDegrees = 0; // 초기 회전 각도 설정
 
@@ -47,11 +43,11 @@ $(document).ready(function () {
 
   // .vision-2-cont 요소를 선택하고 wheel 이벤트 핸들러 추가
   const vision2 = document.querySelector(".vision-2");
-  vision2.addEventListener("wheel", handleWheelEvent);
+  vision2.addEventListener("wheel", handleWheelEvent, { passive: true } );
 });
 
 $(document).ready(function () {
-  // 지구 돌리기 텍스 효과
+  // 지구 돌리기 텍스트 효과
   const vision2conttitles = $(".vision-2-cont-title > div");
   const vision2contsTotal = vision2conttitles.length;
   let vision2Index = 0;
@@ -66,25 +62,5 @@ $(document).ready(function () {
     vision2conttitles.hide();
     vision2conttitles.eq(vision2Index).show();
   });
-
-  vision2.addEventListener("wheel", handleWheelEvent);
 });
-
-$(document).ready(function () {
-  // 지구 돌리기 텍스 효과
-  const vision2conts = $(".vision-2-cont > div");
-  const vision2contsTotal = vision2conts.length;
-  let vision2Index = 0;
-  vision2conts.eq(vision2Index).show();
-
-  document.addEventListener("wheel", function showVision2Text() {
-    vision2Index++;
-    if (vision2Index >= vision2contsTotal) {
-      vision2Index = 0;
-    }
-    vision2conts.hide();
-    vision2conts.eq(vision2Index).show();
-  });
-
-  vision2.addEventListener("wheel", handleWheelEvent);
-});
+})

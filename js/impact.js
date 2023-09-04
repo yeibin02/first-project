@@ -39,7 +39,7 @@ $(document).ready(function () {
     },
     {
       image: "images/impact_icon8.png",
-      text: `<span class="title-text"> 총 순환한 자원의 개수 <span class="text-bold">10,284개!</span></span>`,
+      text: `<span class="title-text"> 총 순환한 자원의 개수 <span class="text-bold">12,084개!</span></span>`,
     },
     // 필요한 만큼 내용 항목 추가
   ];
@@ -47,7 +47,7 @@ $(document).ready(function () {
   // 초기 이미지와 텍스트 설정
   const initialImage = contentData[currentIndex].image;
   imageElement.src = initialImage;
-  contentElement.addEventListener("wheel", (event) => {
+  contentElement.addEventListener("wheel", { passive: true }, (event)  => {
     if (!scrollLocked) {
       scrollLocked = true;
 

@@ -1,7 +1,7 @@
 /* 굿즈 */
 .goods {
   width: 100%;
-  height: auto;
+  height: 50vw;
   background-color: #f0f4ff;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
   position: relative;
   display: flex;
   z-index: 3;
-  margin-top: 2.08333333vw;
+  gap: 2.08333333vw;
 }
 .goods-box-main {
   display: flex;
@@ -27,13 +27,13 @@
   width: 33.33333333vw;
   height: 33.33333333vw;
   border-radius: 50%;
-  margin-right: 2.60416667vw;
-  margin-top: 6.25vw;
   z-index: 3;
   background: url("../images/newjeans_goods1.png") no-repeat center;
   background-size: 33.33333333vw, auto;
   transition: transform 2s ;
   cursor: pointer;
+  margin-top: 1.04166667vw;
+  margin-bottom: 1.04166667vw;
 }
 .goods-box-1:hover {
   width: 33.33333333vw;
@@ -46,14 +46,13 @@
 .goods-box-sub {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 4.16666667vw;
   z-index: 3;
+  gap: 2.06250000vw;
 }
 .goods-box-2 {
   width: 16.66666667vw;
   height: 16.66666667vw;
   border-radius: 50%;
-  margin: 1.04166667vw;
   z-index: 3;
   background: url("../images/newjeans_goods2.png") no-repeat center;
   background-size: 16.66666667vw auto;
@@ -70,7 +69,6 @@
   width: 16.66666667vw;
   height: 16.66666667vw;
   border-radius: 50%;
-  margin: 1.04166667vw;
   z-index: 3;
   background: url("../images/newjeans_goods3.png") no-repeat center;
   background-size: 16.66666667vw auto;
@@ -87,7 +85,6 @@
   width: 16.66666667vw;
   height: 16.66666667vw;
   border-radius: 50%;
-  margin: 1.04166667vw;
   z-index: 3;
   background: url("../images/newjeans_goods4.png") no-repeat center;
   background-size: 16.66666667vw auto;
@@ -104,7 +101,6 @@
   width: 16.66666667vw;
   height: 16.66666667vw;
   border-radius: 50%;
-  margin: 1.04166667vw;
   z-index: 3;
   background: url("../images/newjeans_goods5.png") no-repeat center;
   background-size: 16.66666667vw auto;
@@ -153,11 +149,7 @@
 #non-select {
   user-select: none;
 }
-@media all and (max-width: 1680px) {
-  .goods{
-    width: 100%;
-    height: 50%;
-  }
+/* @media all and (max-width: 1680px) {
 }
 @media all and (max-width: 1280px) {
 }
@@ -166,4 +158,4 @@
 @media all and (max-width: 760px) {
 }
 @media all and (max-width: 480px) {
-}
+} */

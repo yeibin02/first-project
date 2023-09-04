@@ -25,6 +25,7 @@ navi ul li {
 navi ul li a {
     text-decoration: none;
     color: #000;
+    font-size: 0.83333333vw;
 }
 navi ul li a::after{
     content: "·";
