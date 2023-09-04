@@ -107,6 +107,8 @@
     <!-- Swiper Js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+
     <!-- Link Swiper's css -->
     <link
       rel="stylesheet"
@@ -188,11 +190,53 @@
       </ul>
     </navi>
     <!-- top버튼 추가 -->
-    <button class="gotop active">
+    <button class="gotop active" id="goTop">
       <p>TOP</p>
     </button>
+    <!-- 모달창 -->
+    <div class="modal hidden">
+      <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+          <div class="title">
+            <h2>개인정보수집</h2>
+          </div>
+          <div class="close-area">X</div>
+          <div id="container">
+            <form action="#" id="register">
+              <ul id="user-info">
+                <li>
+                  <label for="user-id" class="field">인스타 아이디</label>
+                  <input type="text" id="user-id" required />
+                </li>
+                <li>
+                  <label for="email" class="field">이메일</label>
+                  <input type="email" id="email" required />
+                </li>
+              </ul>
+              <ul id="buttons">
+                <li>
+                  <button type="submit" class="btn btnBlack" id="complete">
+                    완료
+                  </button>
+                </li>
+                <li>
+                  <button type="reset" class="btn btnGray" id="cancel">
+                    취소
+                  </button>
+                </li>
+              </ul>
+            </form>
+          </div>
+          <p class="notice-text">
+            * 이벤트 경품 추첨 알림을 위하여 수집하는 정보입니다.
+          </p>
+        </div>
+      </div>
+    </div>
     <!-- 레이아웃 -->
     <div class="wrap">
+      <!-- 모달창 배경 -->
+      <div class="bg"></div>
       <!-- 상단 -->
       <header class="header">
         <a href="index.html" class="logo"></a>
@@ -250,7 +294,7 @@
         </div>
       </section>
 
-       <!-- 비전 -->
+      <!-- 비전 -->
       <section class="vision-1 section">
         <div class="inner">
           <!-- vision1 -->
@@ -264,21 +308,30 @@
             data-aos-delay="300"
             data-aos-duration="1000"
           >
-          <div class="vision-1-cont">
-            <div class="vision-1-cont-1" data-aos="zoom-in" data-aos-delay="500">
-              <span>낭비없는 삶, 불필요한 쓰레기 줄이기</span><br />
-              지확행이 실천하고 있는 지구를 사랑하는 행동에는 무엇이 있을까?<br />
-              바로 '제로웨이스트'를 실천하는 것
+            <div class="vision-1-cont">
+              <div
+                class="vision-1-cont-1"
+                data-aos="zoom-in"
+                data-aos-delay="500"
+              >
+                <span>낭비없는 삶, 불필요한 쓰레기 줄이기</span><br />
+                지확행이 실천하고 있는 지구를 사랑하는 행동에는 무엇이
+                있을까?<br />
+                바로 '제로웨이스트'를 실천하는 것
+              </div>
+              <div
+                class="vision-1-cont-2"
+                data-aos="zoom-in"
+                data-aos-delay="500"
+              >
+                <span>'제로웨이스트'</span>란?<br />
+                제로 웨이스트(ZERO WASTE)란 제품을 구성하는 포장 및 자재를
+                태우지 않고,<br />
+                환경이나 인간의 건강을 위협할 수 잇는 토지, 해양, 공기로
+                배출하지 않는 것.<br />
+                그리고 재사용, 재활용을 통해 자원을 보존하는 것을 뜻해요.
+              </div>
             </div>
-            <div class="vision-1-cont-2" data-aos="zoom-in" data-aos-delay="500">
-              <span>'제로웨이스트'</span>란?<br />
-              제로 웨이스트(ZERO WASTE)란 제품을 구성하는 포장 및 자재를 태우지
-              않고,<br />
-              환경이나 인간의 건강을 위협할 수 잇는 토지, 해양, 공기로 배출하지
-              않는 것.<br />
-              그리고 재사용, 재활용을 통해 자원을 보존하는 것을 뜻해요.
-            </div>
-          </div>
           </div>
         </div>
       </section>
@@ -286,40 +339,38 @@
         <div class="vision-2-title" data-aos="zoom-in">
           <h3>지확행의 3원칙</h3>
         </div>
-        <img src="images/vision2_earth.png" alt="earth" id="vision2Earth">
+        <img src="images/vision2_earth.png" alt="earth" id="vision2Earth" />
         <div class="vision-2-cont-title">
-          <div class="vision-2-cont-title-1">
-            제로웨이스트
-          </div>
-          <div class="vision-2-cont-title-2">
-            연구
-          </div>
-          <div class="vision-2-cont-title-3">
-            생분해성
-          </div>
+          <div class="vision-2-cont-title-1">제로웨이스트</div>
+          <div class="vision-2-cont-title-2">연구</div>
+          <div class="vision-2-cont-title-3">생분해성</div>
         </div>
         <div class="vision-2-cont">
           <div class="vision-2-cont-1">
             <!-- 제품 기획, 제작, 유통, 판매 전 과정에서 불필요한 재료나 속포장 등이 사용되지 않도록 제품 사용과 관계없는 낭비성 물질을 지양하고 있습니다. -->
-            <span class="vision-bold">제품을 기획할 때</span>부터 <span class="vision-bold">불필요한 재료</span>나 <span class="vision-bold">속포장</span> 등이<br>
-            사용되지 않도록 제품 사용과 관계없는 <span class="vision-bold">낭비성 물질을 지양</span>하고 있습니다.<br>
-            또한, 유통 단계에서도 낭비를 막고자<br>
-            <span class="vision-bold">불필요한 완충재, 보호재 등의 사용을 최소화</span>하고 있습니다.
-
+            <span class="vision-bold">제품을 기획할 때</span>부터
+            <span class="vision-bold">불필요한 재료</span>나
+            <span class="vision-bold">속포장</span> 등이<br />
+            사용되지 않도록 제품 사용과 관계없는
+            <span class="vision-bold">낭비성 물질을 지양</span>하고 있습니다.<br />
+            또한, 유통 단계에서도 낭비를 막고자<br />
+            <span class="vision-bold"
+              >불필요한 완충재, 보호재 등의 사용을 최소화</span
+            >하고 있습니다.
           </div>
           <div class="vision-2-cont-2">
             <!-- 어떻게 하면 기존의 제품을 편리하면서도 친환경적으로 제작할 수 있을지 끊임없이 고민하여 제작합니다. -->
-            우리 주변에는 폐기 이후의 과정은 전혀 고려하지 않고,<br>
-            당장의 편리함 만을 위해 제작된 비환경적 제품이 많습니다.<br>
-            어떻게 하면 이러한 기존의 제품을<br>
-            편리하면서도 친환경적으로 제작할 수 있을지<br>
+            우리 주변에는 폐기 이후의 과정은 전혀 고려하지 않고,<br />
+            당장의 편리함 만을 위해 제작된 비환경적 제품이 많습니다.<br />
+            어떻게 하면 이러한 기존의 제품을<br />
+            편리하면서도 친환경적으로 제작할 수 있을지<br />
             끊임없이 고민하여 제작합니다.
           </div>
           <div class="vision-2-cont-3">
             <!-- 지확행은 생분해가 가능한 재질로 제품을 제작하여 제품이 수명을 다하고 난 후 다시 자연으로 돌아가는 것을 목표로 합니다. -->
-            지구샵은 제품의 끝을 폐기가 아닌 순환이라고 믿습니다.<br>
-            생분해가 가능한 재질로 제작하여<br>
-            제품이 수명을 다하고 난 후<br>
+            지구샵은 제품의 끝을 폐기가 아닌 순환이라고 믿습니다.<br />
+            생분해가 가능한 재질로 제작하여<br />
+            제품이 수명을 다하고 난 후<br />
             다시 자연으로 돌아가는 것을 목표로 합니다.
           </div>
         </div>
@@ -363,7 +414,6 @@
           </div>
         </div>
       </section>
-
 
       <!-- 굿즈상품 -->
       <section class="goods section" id="section5">
@@ -483,52 +533,7 @@
 
       <!-- 이벤트 -->
       <section class="event section" id="section8">
-        <div class="bg"></div>
         <div class="event-inner">
-          <!-- modal -->
-          <div class="modal hidden">
-            <div id="modal" class="modal-overlay">
-              <div class="modal-window">
-                <div class="title">
-                  <h2>개인정보수집</h2>
-                </div>
-                <div class="close-area">X</div>
-                <div id="container">
-                  <form action="#" id="register">
-                    <ul id="user-info">
-                      <li>
-                        <label for="user-id" class="field">인스타 아이디</label>
-                        <input type="text" id="user-id" required />
-                      </li>
-                      <li>
-                        <label for="email" class="field">이메일</label>
-                        <input type="email" id="email" required />
-                      </li>
-                    </ul>
-                    <ul id="buttons">
-                      <li>
-                        <button
-                          type="submit"
-                          class="btn btnBlack"
-                          id="complete"
-                        >
-                          완료
-                        </button>
-                      </li>
-                      <li>
-                        <button type="reset" class="btn btnGray" id="cancel">
-                          취소
-                        </button>
-                      </li>
-                    </ul>
-                  </form>
-                </div>
-                <p class="notice-text">
-                  * 이벤트 경품 추첨 알림을 위하여 수집하는 정보입니다.
-                </p>
-              </div>
-            </div>
-          </div>
           <div class="event-img-wrap">
             <img src="images/campaign_event.png" alt="캠페인 이벤트 참여방법" />
             <button id="openBtn">참여하기</button>

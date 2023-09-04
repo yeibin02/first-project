@@ -7,33 +7,36 @@
 }
 .inner {
   position: relative;
-  width: 1460px;
-  height: 960px;
+  width: 76.04166667vw;
+  height: 50vw;
   margin: 0 auto;
 }
 .gotop {
   display: flex;
-  right: 20px;
-  bottom: 20px;
+  right: 1.04166667vw;
+  bottom: 1.04166667vw;
   justify-content: center;
   align-items: center;
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 3.125vw;
+  height: 3.125vw;
   border-radius: 50%;
   background-color: #000000;
   border: 0;
   color: #fff;
-  font-size: 20px;
-  line-height: 60px;
+  font-size: 1.04166667vw;
+  line-height: 3.125vw;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
   transition: bottom 0.3s, visibility 0.3s, opacity 0.3s;
-  z-index: 999999;
+  z-index: 9;
 }
 .gotop.active {
-  bottom: 20px;
+  bottom: 1.04166667vw;
   visibility: visible;
   opacity: 1;
+}
+.gotop.active-footer {
+  bottom: 6.25vw !important;
 }

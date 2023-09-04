@@ -16,10 +16,8 @@ window.onload = function () {
   const cancel = document.getElementById("cancel");
 
   complete.addEventListener("click", function () {
-    if (validateInput()) {
-      alert("참여해주셔서 감사합니다!");
-      offClick();
-    }
+    alert("참여해주셔서 감사합니다!");
+    offClick();
   });
 
   cancel.addEventListener("click", function () {

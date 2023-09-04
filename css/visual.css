@@ -2,6 +2,7 @@
 .visual {
     position: relative;
     display: block;
+    z-index: 99;
 }
 .visual .inner {
     width: 100%;
