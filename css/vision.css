@@ -1,20 +1,19 @@
 .vision-1 {
-  width: 100%;
+  width: 100vw;
+  /* height: 100vh; */
   height: 960px;
-}
-.vision-1-cont > div{
-  /* display: none; */
+    color: #333;
 }
 /* vision-1 */
 .vision-1-title {
   text-align: center;
-  height: 250px;
+  height: 26.0416vh;
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
+  padding-top: 100px;
 }
 .vision-1-title h3 {
-  font-size: 70px;
+  font-size: 4.375rem;
   color: #39c283;
   font-family: "yg-jalnan";
 }
@@ -25,24 +24,23 @@
   content: "”"; /* 오른쪽 따옴표 */
 }
 .vision-1-title p {
-  color: #000;
-  font-size: 40px;
+  color: #333;
+  font-size: 2.5rem;
   font-family: "NanumSquareRound";
 }
 .vision-1-cont {
   background-color: #f7ffef;
   width: 100%;
-  height: 500px;
-  margin: 0 auto;
+  height: 52.0833vh;
+  /* margin: 0 auto; */
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-size: 35px;
+  font-size: 2.1875rem;
   border-radius: 100px;
+  margin-top: 50px;
 }
-/* .vision-1-cont-1 {
-} */
 .vision-1-cont-1 span {
   color: #39c283;
   text-decoration: underline;
@@ -59,31 +57,31 @@
 /* vision-2 */
 .vision-2 {
   width: 100%;
-  height: 960px;
+  height: 100vh;
   position: relative;
   text-align: center;
   padding-top: 60px;
-  /* overflow: hidden; */
+  overflow: hidden;
+    color: #333;
 }
 .vision-2 img {
   position: absolute;
-  top: -100px;
-  left: -400px;
-  scale: 1;
+  top: 20%;
+  left: -20%;
   width: 60%;
 }
 
 .vision-2-title h3 {
-  font-size: 73px;
+  font-size: 4.5625rem;
   color: #39c283;
   font-family: "yg-jalnan";
 }
 .vision-2-cont-title{
-  width: 600px;
-  height: 250px;
+  width: 31.25vw;
+  height: 26.0416vh;
   line-height: 250px;
   text-align: center;
-  font-size: 100px;
+  font-size: 6.25rem;
   font-weight: 900;
   color: #39c283;
   /* background-color: #f7ffef; */
@@ -94,9 +92,25 @@
   padding: 0 30px;
   border-radius: 30px;
 }
-vision-2-cont-title-1{}
-vision-2-cont-title-2{}
-vision-2-cont-title-3{}
+.vision-2-cont-title-1{}
+.vision-2-cont-title-2{}
+.vision-2-cont-title-3{}
+.vision2click{
+  background-color: #39c283;
+  color: #fff;
+  border-radius: 40px;
+  width: 200px;
+  height: 80px;
+  border: none;
+  font-size: 30px;
+  position: absolute;
+  top: 85%;
+  left: 60%;
+}
+.vision2click:hover{
+  background-color: #22905d;
+  cursor: pointer;
+}
 .vision-2-cont {
   padding: 50px 80px;
   background-color: #f7ffef;
@@ -104,9 +118,9 @@ vision-2-cont-title-3{}
   position: absolute;
   top: 35%;
   left: 40%;
-  font-size: 28px;
-  width: 990px;
-  height: 400px;
+  font-size: 1.75rem;
+  width: 52.0833vw;
+  height: 41.6666vh;
   overflow: hidden;
   text-align: left;
   line-height: 2;
@@ -127,5 +141,6 @@ vision-2-cont-title-3{}
   height: 500px;
 } */
 .vision-bold{
-  font-weight: 800;
+  font-weight: 900;
+  font-size: 1.875rem;
 }
