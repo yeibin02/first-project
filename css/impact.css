@@ -14,15 +14,15 @@
     flex-direction: column;
 }
 .impact-title{
-    margin-top: 2.60416667vw;
+    margin-top: 8.40416667vw;
     position: relative;
     display: block;
-    font-size: 3.64583333vw;
+    font-size: 3.84583333vw;
     color: #4867CA;
     font-family: 'NanumSquareRound';
     font-weight: 600;
     text-align: center;
-    margin-bottom: 3.12500000vw;
+    margin-bottom: 3.84583333vw;
 }
 .impact-title span{
     font-family: 'yg-jalnan';
@@ -30,9 +30,10 @@
 .text-bold{
     font-family: 'yg-jalnan';
     color: #000;
+    font-size: 2.82500000vw;
 }
 .title-text{
-    font-size: 3.12500000vw;
+    font-size: 2.82500000vw;
 }
 .impact-card{
     width: 76.04166667vw;
@@ -42,17 +43,15 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 5.20833333vw;
     flex-direction: column;
-    margin-top: 2.60416667vw;
 }
 .impact-image-icon{
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 10.41666667vw;
+    height: 10.41666667vw;
     background-color: #4867CA;
     border-radius: 50%;
-    margin-top: 80px;
+    margin-top: 4.16666667vw;
 }
 .impact-card img{
     position: absolute;
@@ -70,6 +69,10 @@
 }
 /* 이미지와 텍스트가 트랜지션 효과를 가지도록 CSS 스타일을 추가합니다. */
 #impact-image {
+    /* 예시: 투명도(Opacity) 변경에 대한 트랜지션 설정 */
+    transition: opacity 0.5s ease-in-out;
+}
+#impact-text {
     /* 예시: 투명도(Opacity) 변경에 대한 트랜지션 설정 */
     transition: opacity 0.5s ease-in-out;
 }
