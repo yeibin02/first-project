@@ -1,20 +1,14 @@
 .event {
   position: relative;
   display: block;
-  width: 1960px;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
-}
-.event-inner{
-  position: relative;
-  width: 1460px;
   margin: 0 auto;
 }
 .event-inner {
   position: relative;
+  width: 76.04166667vw;
   margin: 0 auto;
-  width: 1460px;
-  height: 100%;
 }
 .event-img-wrap {
   position: relative;
@@ -29,10 +23,10 @@
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 9999;
 }
 #container {
-  width: 500px;
+  width: 26.04166667vw;
   margin: 0 auto;
 }
 ul,
@@ -42,38 +36,38 @@ li {
 }
 .field {
   float: left;
-  width: 100px;
+  width: 5.20833333vw;
   font-weight: bold;
   font-size: 0.9em;
-  line-height: 55px;
+  line-height: 2.86458333vw;
   text-align: right;
-  margin-right: 15px;
+  margin-right: 0.78125vw;
 }
 input[type="text"],
 input[type="password"],
 input[type="email"] {
   float: left;
-  width: 200px;
-  height: 30px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 10px 0;
+  width: 10.41666667vw;
+  height: 1.5625vw;
+  border: 0.05208333vw solid #aaa;
+  border-radius: 0.26041667vw;
+  padding: 0.26041667vw;
+  margin: 0.52083333vw 0;
   outline: none;
 }
 .title h2 {
   font-size: 1.2em;
 }
 #user-info {
-  padding: 5px;
+  padding: 0.26041667vw;
 }
 .r {
-  line-height: 55px;
+  line-height: 2.86458333vw;
 }
 #buttons > li:first-child {
   position: absolute;
   display: block;
-  bottom: 20px;
+  bottom: 1.04166667vw;
   left: 24%;
 }
 #buttons > li:nth-child(2) {
@@ -85,11 +79,11 @@ input[type="email"] {
 #buttons > li > #complete,
 #buttons > li > #cancel,
 #openBtn {
-  width: 100px;
-  height: 50px;
+  width: 5.20833333vw;
+  height: 2.60416667vw;
   margin: 0 auto;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  border: 0.05208333vw solid #ccc;
+  border-radius: 0.52083333vw;
   background-color: #eee;
   font-size: 0.9em;
   cursor: pointer;
@@ -111,20 +105,20 @@ input[type="email"] {
 }
 #modal .modal-window {
   display: none;
-  position: absolute;
-  top: 2500px;
+  position: fixed;
+  bottom: 350px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 15px;
+  padding: 0.78125vw;
   background: #fff;
-  box-shadow: 8px 8px 1px 0 rgba(55, 62, 59, 0.716);
-  border-radius: 10px;
-  width: 400px;
-  height: 300px;
-  z-index: 2;
+  box-shadow: 0.41666667vw 0.41666667vw 0.05208333vw 0 rgba(55, 62, 59, 0.716);
+  border-radius: 0.52083333vw;
+  width: 20.83333333vw;
+  height: 15.625vw;
+  z-index: 99999;
 }
 #modal .title {
-  padding-left: 10px;
+  padding-left: 0.52083333vw;
   display: inline;
   color: rgb(108, 108, 108);
 }
@@ -134,28 +128,28 @@ input[type="email"] {
 #modal .close-area {
   display: inline;
   float: right;
-  padding-right: 10px;
+  padding-right: 0.52083333vw;
   cursor: pointer;
-  text-shadow: 1px 1px 2px gray;
+  text-shadow: 0.05208333vw 0.05208333vw 0.10416667vw gray;
 }
 .notice-text {
   position: relative;
   display: block;
-  font-size: 13px;
-  margin-top: 20px;
+  font-size: 0.67708333vw;
+  margin-top: 1.04166667vw;
   text-align: center;
 }
 #openBtn {
-  width: 160px;
-  height: 80px;
+  width: 8.33333333vw;
+  height: 4.16666667vw;
   position: absolute;
-  width: 150px;
-  height: 70px;
-  bottom: 60px;
+  width: 7.8125vw;
+  height: 3.64583333vw;
+  bottom: 3.125vw;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 80px;
-  font-size: 1.2em;
+  border-radius: 4.16666667vw;
+  font-size: 1.14583333vw;
   font-family: "NanumSquareRound";
   font-weight: bold;
   border: 0;

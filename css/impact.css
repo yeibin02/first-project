@@ -1,6 +1,6 @@
 .impact{
     width: 100%;
-    height: 960px;
+    height: 50.00000000vw;
     position: relative;
     background-color: #fff;
 }
@@ -14,15 +14,15 @@
     flex-direction: column;
 }
 .impact-title{
-    margin-top: 50px;
+    margin-top: 8.40416667vw;
     position: relative;
     display: block;
-    font-size: 70px;
+    font-size: 3.84583333vw;
     color: #4867CA;
     font-family: 'NanumSquareRound';
     font-weight: 600;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 3.84583333vw;
 }
 .impact-title span{
     font-family: 'yg-jalnan';
@@ -30,51 +30,49 @@
 .text-bold{
     font-family: 'yg-jalnan';
     color: #000;
+    font-size: 2.82500000vw;
 }
 .title-text{
-    font-size: 60px;
+    font-size: 2.82500000vw;
 }
 .impact-card{
-    width: 1460px;
-    height: 500px;
+    width: 76.04166667vw;
+    height: 26.04166667vw;
     background-color: #F0F4FF;
-    border-radius: 20px;
+    border-radius: 1.04166667vw;
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 100px;
     flex-direction: column;
-    margin-top: 50px;
 }
 .impact-image-icon{
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 10.41666667vw;
+    height: 10.41666667vw;
     background-color: #4867CA;
     border-radius: 50%;
-    margin-top: 80px;
+    margin-top: 4.16666667vw;
 }
 .impact-card img{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 170px;
+    width: 8.85416667vw;
     height: auto;
 }
 .impact-card p{
-    line-height: 200px;
-    font-size: 40px;
+    line-height: 10.41666667vw;
+    font-size: 2.08333333vw;
     font-weight: 700;
     color: #5C5B5B;
 }
 /* 이미지와 텍스트가 트랜지션 효과를 가지도록 CSS 스타일을 추가합니다. */
 #impact-image {
     /* 예시: 투명도(Opacity) 변경에 대한 트랜지션 설정 */
-    transition: opacity 0.5s ease-in-out; 
+    transition: opacity 0.5s ease-in-out;
 }
-
 #impact-text {
     /* 예시: 투명도(Opacity) 변경에 대한 트랜지션 설정 */
-    transition: opacity 0.5s ease-in-out; 
+    transition: opacity 0.5s ease-in-out;
 }

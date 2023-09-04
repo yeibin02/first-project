@@ -13,14 +13,6 @@
       name="description"
       content="지구를 위한 낭비없는 가게로 지구를 지킵니다"
     />
-    <!-- 폰트어썸 -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
     <!-- Open Graph -->
     <meta property="og:title" content="지확행 :: 지구를 지키는 확실한 행동" />
@@ -100,12 +92,22 @@
       })(window, document, "script", "dataLayer", "GTM-WLNWXFN8");
     </script>
     <!-- End Google Tag Manager -->
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- css 초기화 -->
     <link rel="stylesheet" href="css/reset.css" />
 
     <!-- Swiper Js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 
     <!-- Link Swiper's css -->
     <link
@@ -187,12 +189,57 @@
         </li>
       </ul>
     </navi>
+
     <!-- top버튼 추가 -->
-    <button class="gotop active">
+    <button class="gotop active" id="goTop">
       <p>TOP</p>
     </button>
+
+    <!-- 모달창 -->
+    <div class="modal hidden">
+      <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+          <div class="title">
+            <h2>개인정보수집</h2>
+          </div>
+          <div class="close-area">X</div>
+          <div id="container">
+            <form action="#" id="register">
+              <ul id="user-info">
+                <li>
+                  <label for="user-id" class="field">인스타 아이디</label>
+                  <input type="text" id="user-id" required />
+                </li>
+                <li>
+                  <label for="email" class="field">이메일</label>
+                  <input type="email" id="email" required />
+                </li>
+              </ul>
+              <ul id="buttons">
+                <li>
+                  <button type="submit" class="btn btnBlack" id="complete">
+                    완료
+                  </button>
+                </li>
+                <li>
+                  <button type="reset" class="btn btnGray" id="cancel">
+                    취소
+                  </button>
+                </li>
+              </ul>
+            </form>
+          </div>
+          <p class="notice-text">
+            * 이벤트 경품 추첨 알림을 위하여 수집하는 정보입니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <!-- 레이아웃 -->
     <div class="wrap">
+      <!-- 모달창 배경 -->
+      <div class="bg"></div>
       <!-- 상단 -->
       <header class="header">
         <a href="index.html" class="logo"></a>
@@ -239,19 +286,10 @@
             </div>
           </div>
         </div>
-        <!--sw-best 콘트롤  -->
-        <div class="sw-visual-control">
-          <button class="sw-visual-prev">
-            <i class="xi-angle-left"></i>
-          </button>
-          <button class="sw-visual-next">
-            <i class="xi-angle-right"></i>
-          </button>
-        </div>
       </section>
 
-       <!-- 비전 -->
-      <section class="vision-1 section">
+      <!-- 비전 -->
+      <section class="vision-1 section" id="section2">
         <div class="inner">
           <!-- vision1 -->
           <div class="vision-1-title" data-aos="zoom-in">
@@ -280,21 +318,24 @@
           </div>
         </div>
       </section>
-      <section class="vision-2 section">
+      <section class="vision-2 section" id="section3">
         <div class="vision-2-title" data-aos="zoom-in">
           <h3>지확행의 3원칙</h3>
         </div>
         <img src="images/vision2_earth_txt.png" alt="earth" id="vision2Earth">
-        
         <button class="vision2click">click</button>
         <div class="vision-2-cont">
           <div class="vision-2-cont-1">
             <!-- 제품 기획, 제작, 유통, 판매 전 과정에서 불필요한 재료나 속포장 등이 사용되지 않도록 제품 사용과 관계없는 낭비성 물질을 지양하고 있습니다. -->
-            <span class="vision-bold">제품을 기획할 때</span>부터 <span class="vision-bold">불필요한 재료</span>나 <span class="vision-bold">속포장</span> 등이<br>
-            사용되지 않도록 제품 사용과 관계없는 <span class="vision-bold">낭비성 물질을 지양</span>하고 있습니다.<br>
-            또한, 유통 단계에서도 낭비를 막고자<br>
-            <span class="vision-bold">불필요한 완충재, 보호재 등의 사용을 최소화</span>하고 있습니다.
-
+            <span class="vision-bold">제품을 기획할 때</span>부터
+            <span class="vision-bold">불필요한 재료</span>나
+            <span class="vision-bold">속포장</span> 등이<br />
+            사용되지 않도록 제품 사용과 관계없는
+            <span class="vision-bold">낭비성 물질을 지양</span>하고 있습니다.<br />
+            또한, 유통 단계에서도 낭비를 막고자<br />
+            <span class="vision-bold"
+              >불필요한 완충재, 보호재 등의 사용을 최소화</span
+            >하고 있습니다.
           </div>
           <div class="vision-2-cont-2">
             <!-- 어떻게 하면 기존의 제품을 편리하면서도 친환경적으로 제작할 수 있을지 끊임없이 고민하여 제작합니다. -->
@@ -315,7 +356,7 @@
       </section>
 
       <!-- 베스트상품 -->
-      <section class="best section">
+      <section class="best section" id="section4">
         <div class="inner">
           <h2 class="best-title" data-aos="zoom-in">지확행 BEST</h2>
           <h4 class="best-subtitle" data-aos="zoom-in" data-aos-delay="100">"지확행의 베스트 상품들을 만나보세요!"</h4>
@@ -353,7 +394,6 @@
           </div>
         </div>
       </section>
-
 
       <!-- 굿즈상품 -->
       <section class="goods section" id="section5">
@@ -396,7 +436,7 @@
             <div
               class="impact-card"
               id="impact-card"
-              data-aos="fade-in"
+              data-aos="fade-up"
               data-aos-delay="600"
               style="transition: 2s"
             >
@@ -404,7 +444,6 @@
                 <img
                   id="impact-image"
                   src="images/impact_icon1.png"
-                  ,
                   alt="이미지"
                 />
               </div>
@@ -412,7 +451,7 @@
                 class="impact-text"
                 id="impact-text"
                 data-aos="fade-up"
-                data-aos-delay="600"
+                data-aos-delay="400"
               >
                 우리가 함께 순환한
                 <span class="text-bold">플라스틱 병뚜껑</span>의 개수는<span
@@ -437,32 +476,17 @@
             지구 지킴이 <span>지확행</span>
           </h2>
           <div class="news-wrap">
-            <div
-              class="news-box-1"
-              data-aos="flip-left"
-              data-aos-delay="500"
-              style="width: 700px; height: 620px"
-            >
+            <div class="news-box-1" data-aos="flip-left" data-aos-delay="500">
               <a href="#">
                 <div class="news-bg news-bg-1"></div>
               </a>
             </div>
-            <div
-              class="news-box-2"
-              data-aos="flip-left"
-              data-aos-delay="600"
-              style="width: 700px; height: 300px"
-            >
+            <div class="news-box-2" data-aos="flip-left" data-aos-delay="600">
               <a href="#">
                 <div class="news-bg news-bg-2"></div>
               </a>
             </div>
-            <div
-              class="news-box-3"
-              data-aos="flip-left"
-              data-aos-delay="700"
-              style="width: 700px; height: 300px"
-            >
+            <div class="news-box-3" data-aos="flip-left" data-aos-delay="700">
               <a href="#">
                 <div class="news-bg news-bg-3"></div>
               </a>
@@ -473,7 +497,6 @@
 
       <!-- 이벤트 -->
       <section class="event section" id="section8">
-        <div class="bg"></div>
         <div class="event-inner">
           <!-- modal -->
           <div class="modal hidden">
@@ -492,7 +515,12 @@
                       </li>
                       <li>
                         <label for="email" class="field">이메일</label>
-                        <input type="email" id="email" required />
+                        <input
+                          type="email"
+                          id="email"
+                          required,
+                          autocomplete="off"
+                        />
                       </li>
                     </ul>
                     <ul id="buttons">
@@ -528,19 +556,26 @@
 
       <!-- footer -->
       <footer class="footer">
-        <p class="copylight">© 2022 LG Electronics. All Rights Reserved</p>
+        <p class="copylight">
+          © 2023 Green Computer Academy. All Rights Reserved
+        </p>
         <a href="#" target="_blank">지확행소개</a>
         <a href="#" target="_blank">상품</a>
         <a href="#" target="_blank">이벤트</a>
         <ul class="sns-wrap">
           <li>
-            <a href="https://www.instagram.com/lg_oledart/" target="_blank"
-              ><i class="fa-brands fa-instagram"></i>
+            <a href="https://www.instagram.com/lg_oledart/" target="_blank">
+              <img src="images/footer_insta.png" alt="" />
             </a>
           </li>
           <li>
             <a href="https://www.youtube.com/c/globalLG" target="_blank">
-              <i class="fa-brands fa-youtube"></i>
+              <img src="images/footer_youtube.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/c/globalLG" target="_blank">
+              <img src="images/footer_store.png" alt="" />
             </a>
           </li>
         </ul>

@@ -25,8 +25,6 @@ $(document).ready(function () {
   // .vision-1-cont에 wheel 이벤트 핸들러 추가
   vision1.addEventListener("wheel", handleWheelEvent);
 });
-
-
 $(document).ready(function () {
   // 비전2 클릭시 지구 돌리기
     const vision2 = $(".vision-2");
@@ -90,7 +88,6 @@ $(document).ready(function () {
     vision2conttitles.hide();
     vision2conttitles.eq(vision2Index).show();
   });
-
 });
 
 $(document).ready(function () {
@@ -110,3 +107,4 @@ $(document).ready(function () {
     vision2conts.eq(vision2Index).show();
   });
 });
+})
