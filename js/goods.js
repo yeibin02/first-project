@@ -38,10 +38,10 @@ $(document).ready(function () {
 
   function animate() {
     // 첫 번째 위치 이동 효과
-    count1++;
+    count1+= 2;
 
     // 두 번째 위치 이동 효과 (속도가 빠름)
-    count2++;
+    count2+= 2;
 
     // 첫 번째 위치 이동 효과 애니메이션
     count1 = marqueeText(count1, pTag1, -1);
