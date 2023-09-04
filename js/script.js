@@ -4,7 +4,6 @@ $(document).ready(function () {
   goTop.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-<<<<<<< HEAD
 
   //footer 영역에 왔을 때 탑 버튼 없애기
   const footer = document.querySelector(".footer");
@@ -31,11 +30,6 @@ $(document).ready(function () {
     },
     offset: "80%",
   });
-
-  //탑 메뉴 컬러 바꾸기
-=======
-  
->>>>>>> 88f5f06867620b99a882751213bb215c6710d165
 });
 
 // $(document).ready(function () {
