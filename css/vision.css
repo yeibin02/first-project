@@ -2,7 +2,9 @@
   width: 100%;
   height: 960px;
 }
-
+.vision-1-cont > div{
+  /* display: none; */
+}
 /* vision-1 */
 .vision-1-title {
   text-align: center;
@@ -10,15 +12,6 @@
   display: flex;
   flex-direction: column;
   padding-top: 60px;
-  animation: vTitle 2s;
-}
-@keyframes vTitle {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 .vision-1-title h3 {
   font-size: 70px;
@@ -56,8 +49,9 @@
   font-size: 50px;
   font-weight: 600;
 }
-/* .vision-1-cont-2 {
-} */
+.vision-1-cont-2 {
+  display: none;
+}
 .vision-1-cont-2 span {
   color: #39c283;
 }
@@ -77,41 +71,50 @@
   left: -400px;
   scale: 1;
   width: 60%;
-  transform: rotate(30deg);
-  /* transition: transform 0.5s; */
-  /* animation: earthAni 1s ease 0 infinite; */
-}
-.vision-2 .img-active {
-  animation: earthAni 15s infinite;
 }
 
-@keyframes earthAni {
-  0% {
-    transform: rotate(30deg);
-  }
-  50% {
-    transform: rotate(-210deg);
-  }
-  100% {
-    transform: rotate(-390deg);
-  }
-}
 .vision-2-title h3 {
   font-size: 73px;
   color: #39c283;
   font-family: "yg-jalnan";
 }
-
-.vision-2-cont {
+.vision-2-cont-title{
+  width: 600px;
+  height: 250px;
+  line-height: 250px;
+  text-align: center;
+  font-size: 100px;
+  font-weight: 900;
+  color: #39c283;
+  /* background-color: #f7ffef; */
+  background-color: #fff;
   position: absolute;
   top: 40%;
-  left: 45%;
-  font-size: 55px;
-  width: 900px;
-  height: 500px;
-  overflow: hidden;
+  left: 5%;
+  padding: 0 30px;
+  border-radius: 30px;
 }
-.vision-2-cont-1 {
+vision-2-cont-title-1{}
+vision-2-cont-title-2{}
+vision-2-cont-title-3{}
+.vision-2-cont {
+  padding: 50px 80px;
+  background-color: #f7ffef;
+  border-radius: 100px;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  font-size: 28px;
+  width: 990px;
+  height: 400px;
+  overflow: hidden;
+  text-align: left;
+  line-height: 2;
+}
+.vision-2-cont > div {
+  /* display: none;  */
+}
+/* .vision-2-cont-1 {
   width: 900px;
   height: 500px;
 }
@@ -122,4 +125,7 @@
 .vision-2-cont-3 {
   width: 900px;
   height: 500px;
+} */
+.vision-bold{
+  font-weight: 800;
 }
