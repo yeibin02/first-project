@@ -3,10 +3,6 @@ $(document).ready(function () {
 const swVisual = new Swiper(".sw-visual", {
   loop: true,
   speed: 1000,
-  navigation: {
-    prevEl: ".sw-visual-prev",
-    nextEl: ".sw-visual-next",
-  },
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
