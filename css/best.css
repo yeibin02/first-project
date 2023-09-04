@@ -25,11 +25,11 @@
     color: #333;
 }
 .best-slide{
-    height: 52.083333vh;
+    height: auto;
 }
 .best-slide-wrap{
-    height: 52.083333vh;
+    height: auto;
 }
 .best-swiper-slide{
-    height: 52vh;
+    height: auto;
 }

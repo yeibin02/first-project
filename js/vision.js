@@ -51,7 +51,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  // 지구 돌리기 텍스 효과
+  // 지구 돌리기 텍스 타이틀 효과
   const vision2conttitles = $(".vision-2-cont-title > div");
   const vision2contsTotal = vision2conttitles.length;
   let vision2Index = 0;
@@ -67,7 +67,6 @@ $(document).ready(function () {
     vision2conttitles.eq(vision2Index).show();
   });
 
-  vision2.addEventListener("wheel", handleWheelEvent);
 });
 
 $(document).ready(function () {
@@ -86,6 +85,4 @@ $(document).ready(function () {
     vision2conts.hide();
     vision2conts.eq(vision2Index).show();
   });
-
-  vision2.addEventListener("wheel", handleWheelEvent);
 });
