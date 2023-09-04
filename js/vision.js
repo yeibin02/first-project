@@ -26,29 +26,53 @@ $(document).ready(function () {
   vision1.addEventListener("wheel", handleWheelEvent);
 });
 
+
 $(document).ready(function () {
-  let rotationDegrees = 0; // 초기 회전 각도 설정
+  // 비전2 클릭시 지구 돌리기
+    const vision2 = $(".vision-2");
+    const earth = $("#vision2Earth");
+    let ratio = 30;
+    earth.css({
+      transform: "rotate(" + ratio + "deg)",
+    });
+    const ratioStep = -120;
+    vision2.click(function () {
+      vision2Index++;
+      if (vision2Index >= vision2contsTotal) {
+        vision2Index = 0;
+      }
+      vision2conts.hide();
+      vision2conts.eq(vision2Index).show();
+      ratio += ratioStep;
+      earth.css({
+        transform: "rotate(" + ratio + "deg)",
+      });
+    });
+  })
 
-  // wheel 이벤트 핸들러 함수 정의
-  function handleWheelEvent(event) {
-    // event.deltaY를 사용하여 스크롤 방향과 양을 파악
-    if (event.deltaY > 0) {
-      // 스크롤 이벤트가 발생할 때마다 120도씩 회전합니다.
-      rotationDegrees += 120;
-    } else {
-      // 스크롤 이벤트가 발생할 때마다 120도씩 회전합니다.
-      rotationDegrees -= 120;
-    }
+// $(document).ready(function () {
+//   let rotationDegrees = 0; // 초기 회전 각도 설정
 
-    // 회전 각도를 이미지 요소에 적용합니다.
-    const imageElement = document.getElementById("vision2Earth");
-    imageElement.style.transform = `rotate(${rotationDegrees}deg)`;
-  }
+//   // wheel 이벤트 핸들러 함수 정의
+//   function handleWheelEvent(event) {
+//     // event.deltaY를 사용하여 스크롤 방향과 양을 파악
+//     if (event.deltaY > 0) {
+//       // 스크롤 이벤트가 발생할 때마다 120도씩 회전합니다.
+//       rotationDegrees += 120;
+//     } else {
+//       // 스크롤 이벤트가 발생할 때마다 120도씩 회전합니다.
+//       rotationDegrees -= 120;
+//     }
 
-  // .vision-2-cont 요소를 선택하고 wheel 이벤트 핸들러 추가
-  const vision2 = document.querySelector(".vision-2");
-  vision2.addEventListener("wheel", handleWheelEvent);
-});
+//     // 회전 각도를 이미지 요소에 적용합니다.
+//     const imageElement = document.getElementById("vision2Earth");
+//     imageElement.style.transform = `rotate(${rotationDegrees}deg)`;
+//   }
+
+//   // .vision-2-cont 요소를 선택하고 wheel 이벤트 핸들러 추가
+//   const vision2 = document.querySelector(".vision-2");
+//   vision2.addEventListener("wheel", handleWheelEvent);
+// });
 
 $(document).ready(function () {
   // 지구 돌리기 텍스 타이틀 효과

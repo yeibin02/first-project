@@ -61,14 +61,13 @@
   position: relative;
   text-align: center;
   padding-top: 60px;
-  /* overflow: hidden; */
+  overflow: hidden;
     color: #333;
 }
 .vision-2 img {
   position: absolute;
-  top: -100px;
-  left: -400px;
-  scale: 1;
+  top: 20%;
+  left: -20%;
   width: 60%;
 }
 
@@ -93,9 +92,25 @@
   padding: 0 30px;
   border-radius: 30px;
 }
-vision-2-cont-title-1{}
-vision-2-cont-title-2{}
-vision-2-cont-title-3{}
+.vision-2-cont-title-1{}
+.vision-2-cont-title-2{}
+.vision-2-cont-title-3{}
+.vision2click{
+  background-color: #39c283;
+  color: #fff;
+  border-radius: 40px;
+  width: 200px;
+  height: 80px;
+  border: none;
+  font-size: 30px;
+  position: absolute;
+  top: 85%;
+  left: 60%;
+}
+.vision2click:hover{
+  background-color: #22905d;
+  cursor: pointer;
+}
 .vision-2-cont {
   padding: 50px 80px;
   background-color: #f7ffef;
