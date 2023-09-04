@@ -138,6 +138,7 @@
 
     <!-- section.js -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/navi.js"></script>
     <script src="js/header.js"></script>
     <script src="js/visual.js"></script>
     <script src="js/vision.js"></script>
@@ -148,20 +149,48 @@
     <script src="js/event.js"></script>
     <script src="js/footer.js"></script>
 
+    <!-- script 불러오기 -->
+    <script src="js/script.js"></script>
+
     <!-- css 불러오기 -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- script 불러오기 -->
-    <script src="js/script.js"></script>
   </head>
 
   <body>
-    <!-- 고정메뉴 -->
-    <div class="fix-menu">
-      <!-- <a href="index.html"><img src="images/bottom_logo.png" alt="#" /></a> -->
-    </div>
-
+    <!-- 네비게이션 추가 -->
+    <navi>
+      <ul>
+        <li>
+          <a href="#section1"><span class="hover-text">메인페이지</span></a>
+        </li>
+        <li>
+          <a href="#section2"><span class="hover-text">지확행이란</span></a>
+        </li>
+        <li>
+          <a href="#section3"><span class="hover-text">지확행 3원칙</span></a>
+        </li>
+        <li>
+          <a href="#section4"><span class="hover-text">베스트 상품</span></a>
+        </li>
+        <li>
+          <a href="#section5"><span class="hover-text">굿즈 상품</span></a>
+        </li>
+        <li>
+          <a href="#section6"><span class="hover-text">지확행 효과</span></a>
+        </li>
+        <li>
+          <a href="#section7"><span class="hover-text">지확행뉴스</span></a>
+        </li>
+        <li>
+          <a href="#section8"><span class="hover-text">캠페인 이벤트</span></a>
+        </li>
+      </ul>
+    </navi>
+    <!-- top버튼 추가 -->
+    <button class="gotop active">
+      <p>TOP</p>
+    </button>
     <!-- 레이아웃 -->
     <div class="wrap">
       <!-- 상단 -->
@@ -196,7 +225,7 @@
       </header>
 
       <!-- 비주얼 -->
-      <section class="visual section">
+      <section class="visual section" id="section1">
         <div class="inner">
           <!-- Swiper -->
           <div class="swiper sw-visual">
@@ -222,7 +251,7 @@
       </section>
 
       <!-- 비전 -->
-      <section class="vision-1 section">
+      <section class="vision-1 section" id="section2">
         <div class="inner">
           <!-- vision1 -->
           <div class="vision-1-title">
@@ -251,26 +280,30 @@
           </div>
         </div>
       </section>
-      <section class="vision-2 section">
+      <section class="vision-2 section" id="section3">
         <div class="vision-2-title">
           <h3>지확행의 3원칙</h3>
         </div>
-        <img src="images/vision2_earth.png" alt="earth">
+        <img src="images/vision2_earth.png" alt="earth" />
         <div class="vision-2-cont">
           <div class="vision-2-cont-1">
-            제품 기획, 제작, 유통, 판매 전 과정에서 불필요한 재료나 속포장 등이 사용되지 않도록 제품 사용과 관계없는 낭비성 물질을 지양하고 있습니다.
+            제품 기획, 제작, 유통, 판매 전 과정에서 불필요한 재료나 속포장 등이
+            사용되지 않도록 제품 사용과 관계없는 낭비성 물질을 지양하고
+            있습니다.
           </div>
           <div class="vision-2-cont-2">
-            어떻게 하면 기존의 제품을 편리하면서도 친환경적으로 제작할 수 있을지 끊임없이 고민하여 제작합니다.
+            어떻게 하면 기존의 제품을 편리하면서도 친환경적으로 제작할 수 있을지
+            끊임없이 고민하여 제작합니다.
           </div>
           <div class="vision-2-cont-3">
-            지확행은 생분해가 가능한 재질로 제품을 제작하여 제품이 수명을 다하고 난 후 다시 자연으로 돌아가는 것을 목표로 합니다.
+            지확행은 생분해가 가능한 재질로 제품을 제작하여 제품이 수명을 다하고
+            난 후 다시 자연으로 돌아가는 것을 목표로 합니다.
           </div>
         </div>
       </section>
 
       <!-- 베스트상품 -->
-      <section class="best section">
+      <section class="best section" id="section4">
         <div class="inner">
           <h2 class="best-title">지확행 BEST</h2>
           <!-- Swiper -->
@@ -309,70 +342,33 @@
       </section>
 
       <!-- 굿즈상품 -->
-      <section class="goods section">
+      <section class="goods section" id="section5">
         <div class="inner">
           <!-- Swiper -->
-          <div class="sw-goods box">
-            <div class="sw-goods-slide-box-main">
-              <div
-                class="sw-goods-slide-box-1"
-                data-aos="fade-right"
-                data-aos-delay="300"
-                data-aos-duration="800"
-              >
-                <a href="#"
-                  ><img src="images/newjeans_goods1.jpg" alt="굿즈1"
-                /></a>
-              </div>
+          <div class="goods-box">
+            <div class="goods-box-main">
+              <div class="goods-box-1"></div>
             </div>
-            <div class="sw-goods-slide-box-sub">
-              <div
-                class="sw-goods-slide-box-2"
-                data-aos="fade-right"
-                data-aos-delay="600"
-                data-aos-duration="800"
-              >
-                <a href="#"
-                  ><img src="images/newjeans_goods2.jpg" alt="굿즈2"
-                /></a>
-              </div>
-              <div
-                class="sw-goods-slide-box-3"
-                data-aos="fade-down"
-                data-aos-delay="600"
-                data-aos-duration="800"
-              >
-                <a href="#"
-                  ><img src="images/newjeans_goods3.jpg" alt="굿즈3"
-                /></a>
-              </div>
-              <div
-                class="sw-goods-slide-box-4"
-                data-aos="fade-up"
-                data-aos-delay="600"
-                data-aos-duration="800"
-              >
-                <a href="#"
-                  ><img src="images/newjeans_goods4.jpg" alt="굿즈4"
-                /></a>
-              </div>
-              <div
-                class="sw-goods-slide-box-5"
-                data-aos="fade-left"
-                data-aos-delay="600"
-                sdata-aos-duration="800"
-              >
-                <a href="#"
-                  ><img src="images/newjeans_goods5.jpg" alt="굿즈5"
-                /></a>
-              </div>
+            <div class="goods-box-sub">
+              <div class="goods-box-2"></div>
+              <div class="goods-box-3"></div>
+              <div class="goods-box-4"></div>
+              <div class="goods-box-5"></div>
             </div>
+          </div>
+          <div class="cover1" id="non-select">
+            <!-- 첫 번째 위치 이동 효과 -->
+            <p class="first-parallel"></p>
+          </div>
+          <div class="cover2" id="non-select">
+            <!-- 두 번째 위치 이동 효과 -->
+            <p class="second-parallel"></p>
           </div>
         </div>
       </section>
 
       <!-- 임팩트 -->
-      <section class="impact section">
+      <section class="impact section" id="section6">
         <div class="inner">
           <div class="impact-box">
             <h2
@@ -393,12 +389,22 @@
               <div class="impact-image-icon">
                 <img
                   id="impact-image"
-                  src="images/impact_icon2.png"
+                  src="images/impact_icon1.png"
+                  ,
                   alt="이미지"
                 />
               </div>
-              <p id="impact-text" data-aos="fade-up" data-aos-delay="600">
-                텍스트
+              <p
+                class="impact-text"
+                id="impact-text"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                우리가 함께 순환한
+                <span class="text-bold">플라스틱 병뚜껑</span>의 개수는<span
+                  class="text-bold"
+                  >5,360개!</span
+                >
               </p>
             </div>
           </div>
@@ -406,7 +412,7 @@
       </section>
 
       <!-- 뉴스 -->
-      <section class="news section">
+      <section class="news section" id="section7">
         <div class="inner">
           <h2
             class="news-title"
@@ -452,7 +458,7 @@
       </section>
 
       <!-- 이벤트 -->
-      <section class="event section">
+      <section class="event section" id="section8">
         <div class="bg"></div>
         <div class="event-inner">
           <!-- modal -->

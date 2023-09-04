@@ -19,13 +19,16 @@ img {
 }
 html {
   font-size: 16px;
+  -ms-overflow-style: none;
+  overflow: auto;
 }
 body {
+  scroll-behavior: smooth; /* 부드러운 스크롤 활성화 */
   font-family: "NanumSquareRound";
   font-size: 1rem;
   /* background-color: #fffcc9; */
   overflow-x: hidden;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
   min-width: 480px;
   word-break: keep-all;
   line-height: 1.4;
@@ -34,36 +37,8 @@ body {
   font-weight: 400;
 }
 
-/* 스크롤 이쁘게 만들기 */
-html {
-  scrollbar-3dlight-color: #efefef;
-  scrollbar-arrow-color: #dfdfdf;
-  scrollbar-base-color: #efefef;
-  scrollbar-face-color: #dfdfdf;
-  scrollbar-track-color: #efefef;
-  scrollbar-darkshadow-color: #efefef;
-  scrollbar-highlight-color: #efefef;
-  scrollbar-shadow-color: #efefef;
-  -ms-overflow-style: none;
-  overflow: auto;
-}
-
 /* SCROLL */
 ::-webkit-scrollbar {
   width: 0px;
 }
 
-/* 스크롤바의 width */
-::-webkit-scrollbar-track {
-  background-color: #619ab4;
-}
-
-/* 스크롤바의 전체 배경색 */
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #1697bf, #62b7ac);
-}
-
-/* 스크롤바 색 */
-::-webkit-scrollbar-button {
-  display: none;
-}

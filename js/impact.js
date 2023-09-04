@@ -11,70 +11,42 @@ $(document).ready(function () {
   const contentData = [
     {
       image: "images/impact_icon1.png",
-      text: `우리가 함께 순환한 <span class="text-bold">플라스틱 병뚜껑</span>의 개수는<span class="text-bold">5,360</span>개!`,
+      text: `우리가 함께 순환한 <span class="text-bold">플라스틱 병뚜껑</span>의 개수는<span class="text-bold">5,360개!</span>`,
     },
     {
       image: "images/impact_icon2.png",
-      text: `우리가 함께 순환한 <span class="text-bold">종이팩</span>의 개수는 <span class="text-bold">2,460</span>개!`,
+      text: `우리가 함께 순환한 <span class="text-bold">종이팩</span>의 개수는 <span class="text-bold">2,460개!</span>`,
     },
     {
       image: "images/impact_icon3.png",
-      text: `우리가 함께 순환한 <span class="text-bold">종이봉투</span> 개수는 <span class="text-bold">860</span>개!`,
+      text: `우리가 함께 순환한 <span class="text-bold">종이봉투</span> 개수는 <span class="text-bold">860개!</span>`,
     },
     {
       image: "images/impact_icon4.png",
-      text: `우리가 함께 순환한 <span class="text-bold">일회용 수저</span> 개수는 <span class="text-bold">2,640</span>개!`,
+      text: `우리가 함께 순환한 <span class="text-bold">일회용 수저</span> 개수는 <span class="text-bold">2,640개!</span>`,
     },
     {
       image: "images/impact_icon5.png",
-      text: `우리가 함께 순환한 <span class="text-bold">젤 아이스팩</span> 개수는 <span class="text-bold">465</span>개!`,
+      text: `우리가 함께 순환한 <span class="text-bold">젤 아이스팩</span> 개수는 <span class="text-bold">465개!</span>`,
     },
     {
       image: "images/impact_icon6.png",
-      text: `우리가 함께 순환한 <span class="text-bold">브리타필터</span> 개수는 <span class="text-bold">159</span>개!`,
+      text: `우리가 함께 순환한 <span class="text-bold">브리타필터</span> 개수는 <span class="text-bold">159개!</span>`,
     },
     {
       image: "images/impact_icon7.png",
-      text: `우리가 함께 순환한 <span class="text-bold">유리병</span>의 개수는 <span class="text-bold">140</span>개!`,
+      text: `우리가 함께 순환한 <span class="text-bold">유리병</span>의 개수는 <span class="text-bold">140개!</span>`,
     },
+    {
+      image: "images/bottom_logo.png",
+      text: `<span class="title-text"> 총 순환한 자원의 개수 <span class="text-bold">10,284개!</span></span>`
+    }
     // 필요한 만큼 내용 항목 추가
   ];
 
   // 초기 이미지와 텍스트 설정
-  imageElement.src = contentData[currentIndex].image;
-  textElement.innerHTML = contentData[currentIndex].text;
-  // textElement.innerHTML = `우리가 함께 순환한 <span class="text-bold">유리병</span>의 개수는 <span>140</span>개!`;
-
-  // contentElement.addEventListener("wheel", (event) => {
-  //   if (!scrollLocked) {
-  //     scrollLocked = true;
-
-  //     // 스크롤 휠 델타 값 계산
-  //     const deltaY = event.deltaY;
-
-  //     // 스크롤 방향에 따라 인덱스 증가 또는 감소
-  //     if (deltaY > 0) {
-  //       currentIndex = (currentIndex + 1) % contentData.length;
-  //     } else {
-  //       currentIndex =
-  //         (currentIndex - 1 + contentData.length) % contentData.length;
-  //     }
-
-  //     // 현재 인덱스에 기반하여 이미지와 텍스트 업데이트
-  //     imageElement.src = contentData[currentIndex].image;
-  //     textElement.innerHTML = contentData[currentIndex].text;
-  //     // console.log(contentData[currentIndex].text);
-  //     // textElement.innerHTML = contentData[currentIndex].text;
-
-  //     // 빠른 변경을 방지하기 위해 스크롤 잠금
-  //     setTimeout(() => {
-  //       scrollLocked = false;
-  //     }, 1000); // 필요에 따라 딜레이 시간 조정
-  //   }
-
-  //   // 기본 스크롤 동작 방지
-  //   event.preventDefault();
-  // });
+  const initialImage = contentData[currentIndex].image;
+  imageElement.src = initialImage;
   contentElement.addEventListener("wheel", (event) => {
     if (!scrollLocked) {
       scrollLocked = true;
@@ -95,7 +67,19 @@ $(document).ready(function () {
   
       // 스타일 변경 후 트랜지션 완료 후에 내용 업데이트
       setTimeout(() => {
-        imageElement.src = contentData[currentIndex].image;
+        const newImage = contentData[currentIndex].image;
+        imageElement.src = newImage; // 이미지 업데이트
+    
+        // 크기를 조절하려면 다음과 같이 스타일을 추가하십시오.
+        if (newImage === "images/bottom_logo.png") {
+          imageElement.style.width = "130px"; // 원하는 크기로 조절
+          imageElement.style.height = "auto"; // 원하는 크기로 조절
+        } else {
+          // 다른 이미지의 크기를 원래 크기로 되돌리거나 다른 크기로 조절할 수 있습니다.
+          imageElement.style.width = "170px"; // 원래 크기로 되돌리기
+          imageElement.style.height = "auto"; // 원래 크기로 되돌리기
+        }
+    
         textElement.innerHTML = contentData[currentIndex].text;
   
         // 트랜지션 효과 재생

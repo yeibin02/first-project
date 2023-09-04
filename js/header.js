@@ -30,19 +30,16 @@ $(document).ready(function () {
         }
       }
 
-      // 현재 스크롤 위치를 가져옵니다.
-      const currentScroll = window.scrollY;
-      // 스크롤 위치가 지정한 위치보다 크거나 같을 때 로고 위치를 변경합니다.
-      if (currentScroll >= scrollPosition) {
-        logo.classList.add("logo-scrolled"); // CSS 클래스 추가
-      } else {
-        logo.classList.remove("logo-scrolled"); // CSS 클래스 제거
-      }
       const scrollTop = window.pageYOffset; // 현재 스크롤 위치
       if (scrollTop === 0) {
         gnb.style.transform = "translateY(0)";
       } else {
         gnb.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 gnb 숨기기
+      }
+      if (scrollTop === 0) {
+        logo.style.transform = "translateY(0)";
+      } else {
+        logo.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 gnb 숨기기
       }
     },
     { passive: true }
@@ -107,7 +104,7 @@ $(document).ready(function () {
   // let prevScrollPos = window.pageYOffset; // 이전 스크롤 위치 초기화
   // dom (html 태그 로딩 완료 후 실행)
   // 각 섹션의 위치값(세로스크롤 위치)
-  const sectionYpos = [960, 1920, 7680];
+  const sectionYpos = [960, 1920, 6720];
   
   // 클래스 nav 의 li 를 찾아라
   // 저장한다. 재활용하기 위해서

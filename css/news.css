@@ -1,7 +1,7 @@
 .news {
     position: relative;
     display: block;
-    background-color: #F0F4FF;
+    background-color: #fff;
   }
   .news .inner {
     width: 1460px;
@@ -19,6 +19,7 @@
     font-family: 'yg-jalnan';
   }
   .news-wrap {
+    background-color: #fff;
     width: calc(100% - 20px * 2);
     margin: 0 auto;
     max-width: 1460px;
@@ -67,7 +68,7 @@
     display: block;
     width: 700px;
     height: 300px;
-    background: url("../images/news_img2.jpg") no-repeat center;
+    background: url("../images/news_img2.jpg") no-repeat bottom;
     background-size: cover;
     transition: all 0.5s;
     border-radius: 10px;
