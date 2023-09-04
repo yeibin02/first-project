@@ -21,10 +21,6 @@
   background-size: 200px auto;
   transition: all 0.5s;
 }
-/* 스크롤 시 로고 위치 변경된 스타일 */
-.logo-scrolled {
-  transform: translateY(-100px); /* 로고를 위로 이동시킴 */
-}
 .nav {
   display: block;
 }

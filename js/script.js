@@ -1,18 +1,11 @@
-// // $window.onload = function () {
-// // // data.json을 로딩
-// // const xhttp = new XMLHttpRequest();
-// // xhttp.onreadystatechange = function (event) {
-// //     const req = event.target;
-// //     if (req.readyState === XMLHttpRequest.DONE) {
-// //     const str = req.response;
-// //     // 글자로 온 테이터를 객체로 변환
-// //     // 글자가 json 규칙대로 만들어지 문자열이다.
-// //     // 그러므로 json글자를 객체로 변환해서 활용한다.
-// //     let obj = JSON.parse(str);
-// //         }
-// //     };
-// // };
-// // // dom (html 태그 로딩 완료 후 실행)
+$(document).ready(function () {
+  // 위로가기 스크롤바 구현
+  const gotop = document.querySelector(".gotop");
+  gotop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
 // $(document).ready(function () {
 //   // 지구 돌리기
 //   const visionImg = $(".vision-2 img");
@@ -103,45 +96,43 @@
 
 //     goSlideHome(sectionPos[sectionIndex]);
 //     // gsap.to($("html"), 0.5, {
-//     //   scrollTo: sectionPos[sectionIndex],
-//     //   onComplete: function () {
-//     //     scrollIng = false;
-//     //   },
-//     // });
-//   });
+//       //   scrollTo: sectionPos[sectionIndex],
+//       //   onComplete: function () {
+//         //     scrollIng = false;
+//         //   },
+//         // });
+//       });
 
-//   // 화면을 이동하는 함수
-//   function goSlideHome(_num) {
-//     // 화면을 이동시킨다.
-//     $("html")
-//       .stop()
-//       .animate(
-//         {
-//           scrollTop: _num,
-//         },
-//         sectionSpeed,
-//         function () {
-//           // 애니메이션이 완료되었다.
-//           // 다시 스크롤 이벤트를 받겠다.
-//           scrollIng = false;
-//           // 지구본 돌리기
-//           if (sectionIndex === 2) {
-//             visionImg.addClass("img-active");
-//             vision2Index = 0;
-//             vision2conts.hide();
-//             vision2conts.eq(vision2Index).show();            
-//             clearInterval(vision2Timer);
-//             vision2Timer = setInterval(showVision2Text, vision2Interval);
-//           } else {
-//             visionImg.removeClass("img-active");
-//             vision2Index = 0;
-//             clearInterval(vision2Timer);
+//       // 화면을 이동하는 함수
+//       function goSlideHome(_num) {
+//         // 화면을 이동시킨다.
+//         $("html")
+//         .stop()
+//         .animate(
+//           {
+//             scrollTop: _num,
+//           },
+//           sectionSpeed,
+//           function () {
+//             // 애니메이션이 완료되었다.
+//             // 다시 스크롤 이벤트를 받겠다.
+//             scrollIng = false;
+//             // 지구본 돌리기
+//             if (sectionIndex === 2) {
+//               visionImg.addClass("img-active");
+//               vision2Index = 0;
+//               vision2conts.hide();
+//               vision2conts.eq(vision2Index).show();
+//               clearInterval(vision2Timer);
+//               vision2Timer = setInterval(showVision2Text, vision2Interval);
+//             } else {
+//               visionImg.removeClass("img-active");
+//               vision2Index = 0;
+//               clearInterval(vision2Timer);
+//             }
 //           }
+//           );
 //         }
-//       );
-//   }
-//   // 최초 1번은 즉, 새로고침 등등의 작업시
-//   goSlideHome(0);
-// });
-// // // 멀티미디어 리소스 로딩 완료 후 실행
-// // window.onload = function(){}
+//         // 최초 1번은 즉, 새로고침 등등의 작업시
+//         goSlideHome(0);
+//       });

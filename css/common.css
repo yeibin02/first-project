@@ -1,22 +1,39 @@
 /* 공통요소 */
 .clearfix::after {
-    position: relative;
-    display: block;
-    width: 100%;
-    clear: both;
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
 }
 .inner {
-    position: relative;
-    width: 1460px;
-    height: 960px;
-    margin: 0 auto;
+  position: relative;
+  width: 1460px;
+  height: 960px;
+  margin: 0 auto;
 }
-/* .fix-menu{
-    position: fixed;
-    width: 80px;
-    height: auto;
-    bottom: 2px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
-} */
+.gotop {
+  display: flex;
+  right: 20px;
+  bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #000000;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 60px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: bottom 0.3s, visibility 0.3s, opacity 0.3s;
+  z-index: 999999;
+}
+.gotop.active {
+  bottom: 20px;
+  visibility: visible;
+  opacity: 1;
+}
