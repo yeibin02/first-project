@@ -5,7 +5,7 @@
   height: 100%;
   margin: 0 auto;
 }
-.event-inner{
+.event-inner {
   position: relative;
   width: 1460px;
   margin: 0 auto;
@@ -155,7 +155,7 @@ input[type="email"] {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 80px;
-  font-size: 1.2em;
+  font-size: 1.4rem;
   font-family: "NanumSquareRound";
   font-weight: bold;
   border: 0;
@@ -164,4 +164,210 @@ input[type="email"] {
 #openBtn:hover {
   color: #fff;
   background-color: #e1598f;
+}
+
+/* 반응형 */
+@media all and (max-width: 1880px) {
+  .event {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .event-inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media all and (max-width: 1680px) {
+  .event {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .event-inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #openBtn {
+    width: 7.74vw;
+    height: 3.57vw;
+    bottom: 1.5%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.2rem;
+  }
+  #modal .modal-window {
+    top: 119.05vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media all and (max-width: 1440px) {
+  .event {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .event-inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #openBtn {
+    width: 7.64vw;
+    height: 3.47vw;
+    bottom: 1.2%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.1rem;
+  }
+  #modal .modal-window {
+    position: absolute;
+    top: 103vw;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .event {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .event-inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #openBtn {
+    width: 7.81vw;
+    height: 3.52vw;
+    bottom: 1.5%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1rem;
+  }
+  #modal .modal-window {
+    top: 93.75vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .event {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .event-inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #openBtn {
+    width: 7.81vw;
+    height: 3.42vw;
+    bottom: 1.5%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 0.9rem;
+  }
+  #modal .modal-window {
+    top: 68.36vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media all and (max-width: 845px) {
+  .event {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .event-inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #openBtn {
+    width: 7.81vw;
+    height: 3.42vw;
+    bottom: 1.5%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 0.7rem;
+  }
+  #modal .modal-window {
+    /* top: 68.36vw; */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media all and (max-width: 970px) {
+  .event {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .event-inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #openBtn {
+    width: 7.81vw;
+    height: 3.42vw;
+    bottom: 1.5%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 0.85em;
+  }
+  #modal .modal-window {
+    /* top: 68.36vw; */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media all and (max-width: 760px) {
+  .event {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .event-inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #openBtn {
+    width: 8vw;
+    height: 4vw;
+    bottom: 1.5%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 0.3rem;
+  }
+  #modal .modal-window {
+    /* top: 39.47vw; */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media all and (max-width: 480px) {
+  .event {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .event-inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #openBtn {
+    width: 8vw;
+    height: 4vw;
+    bottom: 1.7%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 0.02rem;
+  }
 }
