@@ -5,9 +5,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 80px;
+  padding: 0 4.16666667vw;
   width: 100%;
-  height: 100px;
+  height: 5.20833333vw;
   /* background-color: rgba(255, 255, 255, 0); */
   /* border-bottom: 1px solid rgba(255, 255, 255, 1); */
   z-index: 99;
@@ -15,10 +15,10 @@
 }
 .logo {
   position: relative;
-  width: 200px;
-  height: 100px;
+  width: 10.41666667vw;
+  height: 5.20833333vw;
   background: url("../images/main_logo.png") no-repeat center;
-  background-size: 200px auto;
+  background-size: 10.41666667vw auto;
   transition: all 0.5s;
 }
 .nav {
@@ -26,14 +26,14 @@
 }
 .gnb {
   display: flex;
-  margin-right: -34px;
+  margin-right: -1.77083333vw;
   transition: all 0.5s;
 }
 .gnb > li > a {
   display: block;
-  padding: 0 34px;
-  line-height: 100px;
-  font-size: 18px;
+  padding: 0 1.77083333vw;
+  line-height: 5.20833333vw;
+  font-size: 0.93750000vw;
   font-weight: 900;
   color: #000;
   transition: line-height 0.5s, padding 0.5s;
@@ -48,10 +48,10 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -0.26041667vw;
   width: 0;
   opacity: 0;
-  height: 2px;
+  height: 0.10416667vw;
   background-color: #000;
   transition: width 0.5s, opacity 0.5s;
 }
@@ -64,11 +64,11 @@
 .mbt {
   position: absolute;
   display: none;
-  right: 20px;
+  right: 1.04166667vw;
   top: 50%;
   transform: translateY(-50%);
-  width: 30px;
-  height: 22px;
+  width: 1.56250000vw;
+  height: 1.14583333vw;
   font-size: 0;
   border: 0;
   background-color: transparent;
@@ -80,7 +80,7 @@
   top: 0;
   display: block;
   width: 100%;
-  height: 2px;
+  height: 0.10416667vw;
   background-color: #000;
   transition: background 0.3s;
 }
@@ -114,11 +114,11 @@
 /* 모바일 gnb */
 .nav-mb {
   position: absolute;
-  top: 70px;
+  top: 3.64583333vw;
   left: 100%;
   display: block;
   width: 100%;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 3.64583333vw);
   background-color: #fff;
   opacity: 0;
   transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -128,127 +128,47 @@
   opacity: 1 !important;
 }
 .nav-mb-gnb li {
-  line-height: 67px;
+  line-height: 3.48958333vw;
 }
 .nav-mb-gnb li a {
   display: block;
-  padding: 0 40px;
-  font-size: 24px;
+  padding: 0 2.08333333vw;
+  font-size: 1.25000000vw;
   color: #222;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 0.05208333vw solid #e5e5e5;
 }
-@media screen and (max-width: 1280px) {
+
+
+/* 반응형 */
+@media all and (max-width: 1280px) {
   .header {
-    padding: 0 60px;
+    padding: 0 3.12500000vw;
   }
   .logo {
-    width: 150px;
+    width: 10.41666667vw;
+    height: 5.20833333vw;
+    margin-left: -0.78125000vw;
   }
   .gnb {
-    margin-right: -26px;
+    margin-right: -1.35416667vw;
   }
   .gnb > li > a {
-    padding: 0 26px;
+    padding: 0 1.35416667vw;
   }
 }
-@media screen and (max-width: 1024px) {
+@media all and (max-width: 1024px) {
   .logo {
-    width: 120px;
+    width: 10.41666667vw;
+    height: 5.20833333vw;
+    margin-left: -5.20833333vw;
+    background: url("../images/bottom_logo.png") no-repeat center;
+    background-size: 3.12500000vw auto;
   }
   .header {
-    height: 70px;
-  }
-  .gnb {
-    display: none;
-  }
-  .mbt {
-    display: block;
+    height: 5.20833333vw;
   }
 }
 
-
-
-
-
-
-
-
-
-
-/* 상단 */
-/* .header {
-  width: 100%;
-  height: auto;
-  background-color: transparent;
-}
-.header .inner {
-  width: 100%;
-  height: 100px;
-  max-width: 1920px;
-  padding: 0 20px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo img {
-  width: 230px;
-  height: 80px;
-  width: 200px;
-  margin-left: 20px;
-}
-.nav {
-  height: 100%;
-  margin-right: 20px;
-}
-.nav .gnb {
-  display: flex;
-  justify-content: space-between;
-  gap: 0 120px;
-  height: 100%;
-}
-.nav .gnb li {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 5px;
-}
-.nav .gnb li a {
-  font-weight: 600;
-  color: #000;
-  font-size: 19px;
-  transition: color 0.2s;
-}
-.nav .gnb li::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 6px;
-  background: #39c283;
-  opacity: 0;
-  transition: all 0.3s;
-}
-.nav ul li:hover::after {
-  opacity: 1;
-}
-.nav ul li:hover {
-  cursor: pointer;
-}
-.nav ul li:hover a {
-  color: #39c283;
-} */
-
-/* js에서 메뉴 포커스 */
-/* .focus-active::after {
-  opacity: 1 !important;
-}
-.focus-active a {
-  color: #39c283 !important;
-} */
 
 /* @media all and (max-width: 1920px) {
 }
