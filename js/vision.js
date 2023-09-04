@@ -75,6 +75,7 @@ $(document).ready(function () {
   const vision2conts = $(".vision-2-cont > div");
   const vision2contsTotal = vision2conts.length;
   let vision2Index = 0;
+  vision2conts.hide();
   vision2conts.eq(vision2Index).show();
 
   document.addEventListener("wheel", function showVision2Text() {
