@@ -13,14 +13,6 @@
       name="description"
       content="지구를 위한 낭비없는 가게로 지구를 지킵니다"
     />
-    <!-- 폰트어썸 -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
     <!-- Open Graph -->
     <meta property="og:title" content="지확행 :: 지구를 지키는 확실한 행동" />
@@ -100,6 +92,14 @@
       })(window, document, "script", "dataLayer", "GTM-WLNWXFN8");
     </script>
     <!-- End Google Tag Manager -->
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- css 초기화 -->
     <link rel="stylesheet" href="css/reset.css" />
@@ -189,10 +189,12 @@
         </li>
       </ul>
     </navi>
+
     <!-- top버튼 추가 -->
     <button class="gotop active" id="goTop">
       <p>TOP</p>
     </button>
+
     <!-- 모달창 -->
     <div class="modal hidden">
       <div id="modal" class="modal-overlay">
@@ -233,6 +235,7 @@
         </div>
       </div>
     </div>
+
     <!-- 레이아웃 -->
     <div class="wrap">
       <!-- 모달창 배경 -->
@@ -283,19 +286,10 @@
             </div>
           </div>
         </div>
-        <!--sw-best 콘트롤  -->
-        <div class="sw-visual-control">
-          <button class="sw-visual-prev">
-            <i class="xi-angle-left"></i>
-          </button>
-          <button class="sw-visual-next">
-            <i class="xi-angle-right"></i>
-          </button>
-        </div>
       </section>
 
       <!-- 비전 -->
-      <section class="vision-1 section">
+      <section class="vision-1 section" id="section2">
         <div class="inner">
           <!-- vision1 -->
           <div class="vision-1-title" data-aos="zoom-in">
@@ -335,7 +329,7 @@
           </div>
         </div>
       </section>
-      <section class="vision-2 section">
+      <section class="vision-2 section" id="section3">
         <div class="vision-2-title" data-aos="zoom-in">
           <h3>지확행의 3원칙</h3>
         </div>
@@ -377,7 +371,7 @@
       </section>
 
       <!-- 베스트상품 -->
-      <section class="best section">
+      <section class="best section" id="section4">
         <div class="inner">
           <h2 class="best-title" data-aos="zoom-in">지확행 BEST</h2>
           <!-- Swiper -->
@@ -518,8 +512,6 @@
       <!-- 이벤트 -->
       <section class="event section" id="section8">
         <div class="event-inner">
-<<<<<<< HEAD
-=======
           <!-- modal -->
           <div class="modal hidden">
             <div id="modal" class="modal-overlay">
@@ -540,7 +532,7 @@
                         <input
                           type="email"
                           id="email"
-                          required
+                          required,
                           autocomplete="off"
                         />
                       </li>
@@ -569,7 +561,6 @@
               </div>
             </div>
           </div>
->>>>>>> 88f5f06867620b99a882751213bb215c6710d165
           <div class="event-img-wrap">
             <img src="images/campaign_event.png" alt="캠페인 이벤트 참여방법" />
             <button id="openBtn">참여하기</button>

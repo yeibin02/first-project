@@ -47,7 +47,7 @@ $(document).ready(function () {
   // 초기 이미지와 텍스트 설정
   const initialImage = contentData[currentIndex].image;
   imageElement.src = initialImage;
-  contentElement.addEventListener("wheel", { passive: true }, (event)  => {
+  contentElement.addEventListener("wheel", (event)  => {
     if (!scrollLocked) {
       scrollLocked = true;
 
