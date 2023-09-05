@@ -33,3 +33,7 @@
 .best-swiper-slide{
     height: auto;
 }
+.bestNextButton,
+.bestPrevButton{
+    color: #39c283;
+}
