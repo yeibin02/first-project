@@ -97,7 +97,7 @@
   font-weight: 600;
   margin: 0 auto;
 }
-.vision1contButton:hover {
+.vision1contButton:hover{
   background-color: #22905d;
   cursor: pointer;
 }
