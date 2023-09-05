@@ -31,7 +31,7 @@
   display: block;
   padding: 0 1.77083333vw;
   line-height: 5.20833333vw;
-  font-size: 0.93750000vw;
+  font-size: 0.9375vw;
   font-weight: 900;
   color: #000;
   transition: line-height 0.5s, padding 0.5s;
@@ -39,8 +39,8 @@
 .gnb > li > a > span {
   position: relative;
 }
-.gnb > li > a:hover{
-  color: #3AC284;
+.gnb > li > a:hover {
+  color: #3ac284;
 }
 .gnb > li > a > span::after {
   content: "";
@@ -56,7 +56,7 @@
 .gnb > li > a:hover > span::after {
   opacity: 1;
   width: 100%;
-  background-color: #3AC284;
+  background-color: #3ac284;
 }
 /* 모바일 메뉴 */
 .mbt {
@@ -65,7 +65,7 @@
   right: 1.04166667vw;
   top: 50%;
   transform: translateY(-50%);
-  width: 1.56250000vw;
+  width: 1.5625vw;
   height: 1.14583333vw;
   font-size: 0;
   border: 0;
@@ -131,7 +131,7 @@
 .nav-mb-gnb li a {
   display: block;
   padding: 0 2.08333333vw;
-  font-size: 1.25000000vw;
+  font-size: 1.25vw;
   color: #222;
   border-bottom: 0.05208333vw solid #e5e5e5;
 }
@@ -140,12 +140,10 @@
 /* 반응형 */
 @media all and (max-width: 1280px) {
   .header {
-    padding: 0 3.12500000vw;
+    padding: 0 3.125vw;
   }
   .logo {
-    width: 10.41666667vw;
-    height: 5.20833333vw;
-    margin-left: -0.78125000vw;
+    margin-left: -0.78125vw;
   }
   .gnb {
     margin-right: -1.35416667vw;
@@ -153,27 +151,45 @@
   .gnb > li > a {
     padding: 0 1.35416667vw;
   }
+  .mbt span {
+    width: 100%;
+    height: 0.10416667vw;
+  }
 }
 @media all and (max-width: 1024px) {
-  .logo {
-    width: 6.25000000vw;
-    height: 4.16666667vw;
-    margin-left: -0.20833333vw;
-    background: url("../images/logo.png") no-repeat center;
-    background-size: 6.25000000vw auto;
-  }
-  .header {
-    height: 4.16666667vw;
-  }
-  .gnb{
-    display: none;
-  }
-  .mbt{
-    display: block;
+  .gnb {
+    margin-right: -1.35416667vw;
   }
 }
-
-
+@media all and (max-width: 960px) {
+  .logo{
+    margin-left: -1.9vw;
+  }
+  .gnb {
+    display: none;
+  }
+  .mbt span {
+    width: 100%;
+    height: 0.0816667vw;
+  }
+  .mbt {
+    display: block;
+    width: 1.5625vw;
+    height: 1.14583333vw;
+    margin-top: -0.8vw;
+}
+}
+@media all and (max-width: 360px) {
+  .mbt span {
+    width: 100%;
+    height: 0.1416667vw;
+  }
+  .mbt {
+    display: block;
+    width: 2.0625vw;
+    height: 1.64583333vw;
+}
+}
 
 /* @media all and (max-width: 1920px) {
 }

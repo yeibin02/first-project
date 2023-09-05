@@ -39,7 +39,12 @@ $(document).ready(function () {
       if (scrollTop === 0) {
         logo.style.transform = "translateY(0)";
       } else {
-        logo.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 gnb 숨기기
+        logo.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 logo 숨기기
+      }
+      if (scrollTop === 0) {
+        mbt.style.transform = "translateY(0)";
+      } else {
+        mbt.style.transform = "translateY(-300%)"; // 스크롤 내릴 때 mbt 숨기기
       }
     },
     { passive: true }

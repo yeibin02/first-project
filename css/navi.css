@@ -6,22 +6,21 @@ navi {
     top: 50%;
     transform: translateY(-50%);
     right: 0;
-    width: 10.41666667vw;
+    width: 18.41666667vw;
     height: auto;
     margin-right: 1.04166667vw;
     overflow-y: auto;
     text-align: right;
+    display: inline-block;
 }
 navi ul {
     list-style: none;
     padding: 0;
 }
-
 navi ul li {
     padding: 0.26041667vw;
     border-radius: 50%;
 }
-
 navi ul li a {
     text-decoration: none;
     color: #000;
@@ -42,7 +41,6 @@ navi ul li a .hover-text {
     border-radius: 0.15625000vw;
     transition: opacity 0.3s; /* 호버 시에 투명도 전환 효과 */
 }
-
 navi ul li a:hover .hover-text {
     opacity: 1; /* 호버 시에 보이도록 변경 */
 }
