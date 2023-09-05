@@ -12,19 +12,19 @@
 }
 .gotop {
   display: flex;
-  right: 1.04166667vw;
-  bottom: 1.04166667vw;
+  right: 20px;
+  bottom: 20px;
   justify-content: center;
   align-items: center;
   position: fixed;
-  width: 3.12500000vw;
-  height: 3.12500000vw;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #000000;
   border: 0;
   color: #fff;
-  font-size: 1.04166667vw;
-  line-height: 3.12500000vw;
+  font-size: 20px;
+  line-height: 60px;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
@@ -32,10 +32,10 @@
   z-index: 9;
 }
 .gotop.active {
-  bottom: 1.04166667vw;
+  bottom: 20px;
   visibility: visible;
   opacity: 1;
 }
 .gotop.active-footer {
-  bottom: 6.25vw !important;
+  bottom: 120px !important;
 }

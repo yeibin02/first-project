@@ -29,6 +29,11 @@
   width: 26.04166667vw;
   margin: 0 auto;
 }
+/* 
+#container {
+  width: 500px;
+  margin: 0 auto;
+} */
 ul,
 li {
   clear: both;
@@ -36,38 +41,37 @@ li {
 }
 .field {
   float: left;
-  width: 5.20833333vw;
+  width: 100px;
   font-weight: bold;
-  font-size: 0.9em;
-  line-height: 2.86458333vw;
+  font-size: 15px;
+  line-height: 55px;
   text-align: right;
-  margin-right: 0.78125vw;
+  margin-right: 15px;
 }
 input[type="text"],
-input[type="password"],
 input[type="email"] {
   float: left;
-  width: 10.41666667vw;
-  height: 1.5625vw;
-  border: 0.05208333vw solid #aaa;
-  border-radius: 0.26041667vw;
-  padding: 0.26041667vw;
-  margin: 0.52083333vw 0;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0;
   outline: none;
 }
 .title h2 {
-  font-size: 1.2em;
+  font-size: 18px;
 }
 #user-info {
-  padding: 0.26041667vw;
+  padding: 5px;
 }
 .r {
-  line-height: 2.86458333vw;
+  line-height: 55px;
 }
 #buttons > li:first-child {
   position: absolute;
   display: block;
-  bottom: 1.04166667vw;
+  bottom: 20px;
   left: 24%;
 }
 #buttons > li:nth-child(2) {
@@ -79,13 +83,13 @@ input[type="email"] {
 #buttons > li > #complete,
 #buttons > li > #cancel,
 #openBtn {
-  width: 5.20833333vw;
-  height: 2.60416667vw;
+  width: 100px;
+  height: 50px;
   margin: 0 auto;
-  border: 0.05208333vw solid #ccc;
-  border-radius: 0.52083333vw;
+  border: 1px solid #ccc;
+  border-radius: 10px;
   background-color: #eee;
-  font-size: 0.9em;
+  font-size: 15px;
   cursor: pointer;
   font-family: "NanumSquareRound";
   font-weight: bold;
@@ -109,16 +113,16 @@ input[type="email"] {
   bottom: 350px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 0.78125vw;
+  padding: 15px;
   background: #fff;
-  box-shadow: 0.41666667vw 0.41666667vw 0.05208333vw 0 rgba(55, 62, 59, 0.716);
-  border-radius: 0.52083333vw;
-  width: 20.83333333vw;
-  height: 15.625vw;
+  box-shadow: 8px 8px 1px 0 rgba(55, 62, 59, 0.716);
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
   z-index: 99999;
 }
 #modal .title {
-  padding-left: 0.52083333vw;
+  padding-left: 10px;
   display: inline;
   color: rgb(108, 108, 108);
 }
@@ -128,23 +132,21 @@ input[type="email"] {
 #modal .close-area {
   display: inline;
   float: right;
-  padding-right: 0.52083333vw;
+  padding-right: 10px;
   cursor: pointer;
-  text-shadow: 0.05208333vw 0.05208333vw 0.10416667vw gray;
+  text-shadow: 1px 1px 2px gray;
 }
 .notice-text {
   position: relative;
   display: block;
-  font-size: 0.67708333vw;
-  margin-top: 1.04166667vw;
+  font-size: 13px;
+  margin-top: 20px;
   text-align: center;
 }
 #openBtn {
   width: 8.33333333vw;
   height: 4.16666667vw;
   position: absolute;
-  width: 7.8125vw;
-  height: 3.64583333vw;
   bottom: 3.125vw;
   left: 50%;
   transform: translateX(-50%);
@@ -158,4 +160,68 @@ input[type="email"] {
 #openBtn:hover {
   color: #fff;
   background-color: #e1598f;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1247px) {
+  .field {
+    min-width: 80px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  input[type="text"],
+  input[type="email"] {
+    float: left;
+    min-width: 320px;
+    min-height: 30px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0px;
+    outline: none;
+  }
+  .title h2 {
+    font-size: 18px;
+  }
+  #user-info {
+    padding: 5px;
+  }
+  .r {
+    line-height: 30px;
+  }
+  #buttons > li:first-child {
+    position: absolute;
+    display: block;
+    bottom: 20px;
+    left: 24%;
+  }
+  #buttons > li:nth-child(2) {
+    position: absolute;
+    display: block;
+    bottom: 20px;
+    right: 24%;
+  }
+  #buttons > li > #complete,
+  #buttons > li > #cancel {
+    min-width: 100px;
+    min-height: 50px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #eee;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: "NanumSquareRound";
+    font-weight: bold;
+  }
+  #buttons > li:hover #complete {
+    background-color: #3ac284;
+  }
+  #buttons > li:hover #cancel {
+    background-color: #3ac284;
+  }
+
 }
