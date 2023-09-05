@@ -37,12 +37,19 @@ $(document).ready(function () {
   }
 
   function animate() {
-    // 첫 번째 위치 이동 효과
-    count1+= 3;
-
-    // 두 번째 위치 이동 효과 (속도가 빠름)
-    count2+= 3;
-
+    // 첫 번째 위치 이동 효과 (360px 이하)
+    if (window.innerWidth <= 360) {
+      count1 += 1; // 속도를 느리게
+    } else {
+      count1 += 2; // 기본 속도
+    }
+    // 두 번째 위치 이동 효과 (360px 이하)
+    if (window.innerWidth <= 360) {
+      count2 += 1; // 속도를 느리게
+    } else {
+      count2 += 2; // 기본 속도
+    }
+    
     // 첫 번째 위치 이동 효과 애니메이션
     count1 = marqueeText(count1, pTag1, -1);
 
