@@ -2,7 +2,8 @@
   width: 100vw;
   /* height: 100vh; */
   height: 960px;
-    color: #333;
+  color: #333;
+  margin: 0 auto;
 }
 /* vision-1 */
 .vision-1-title {
@@ -25,8 +26,32 @@
 }
 .vision-1-title p {
   color: #333;
-  font-size: 2.5rem;
+  font-size: 6vw;
   font-family: "NanumSquareRound";
+}
+@media screen and (max-width : 1920px) {
+  .vision-1-title p {
+    font-size:2.5vw;
+  }
+  .vision-1-cont {
+    font-size: 1.5vw;
+  }
+}
+@media screen and (max-width : 960px) {
+  .vision-1-title p {
+    font-size:5vw;
+  }
+  .vision-1-cont {
+    font-size: 3.5vw;
+  }
+}
+@media screen and (max-width : 480px) {
+  .vision-1-title p {
+    font-size:7vw;
+  }
+  .vision-1-cont {
+    font-size: 5vw;
+  }
 }
 .vision-1-cont {
   background-color: #f7ffef;
@@ -40,18 +65,41 @@
   font-size: 2.1875rem;
   border-radius: 100px;
   margin-top: 50px;
+  overflow: hidden;
+  position: relative;
 }
 .vision-1-cont-1 span {
   color: #39c283;
-  text-decoration: underline;
   font-size: 50px;
   font-weight: 600;
 }
 .vision-1-cont-2 {
-  display: none;
+  position: absolute;
+  top: 53vh;
+  left: 12%;
+  opacity: 0;
+  transition: all 2s;
 }
 .vision-1-cont-2 span {
   color: #39c283;
+}
+.vision1contButton {
+  position: absolute;
+  bottom: -50px;
+  left: 48%;
+  background-color: #39c283;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0 auto;
+}
+.vision1contButton:hover {
+  background-color: #22905d;
+  cursor: pointer;
 }
 
 /* vision-2 */
@@ -62,13 +110,14 @@
   text-align: center;
   padding-top: 60px;
   overflow: hidden;
-    color: #333;
+  color: #333;
 }
 .vision-2 img {
   position: absolute;
-  top: 20%;
-  left: -20%;
-  width: 60%;
+  top: 33%;
+  left: -33%;
+  width: 70%;
+  transform: rotate(40deg);
 }
 
 .vision-2-title h3 {
@@ -76,7 +125,7 @@
   color: #39c283;
   font-family: "yg-jalnan";
 }
-.vision-2-cont-title{
+.vision-2-cont-title {
   width: 31.25vw;
   height: 26.0416vh;
   line-height: 250px;
@@ -92,10 +141,13 @@
   padding: 0 30px;
   border-radius: 30px;
 }
-.vision-2-cont-title-1{}
-.vision-2-cont-title-2{}
-.vision-2-cont-title-3{}
-.vision2click{
+.vision-2-cont-title-1 {
+}
+.vision-2-cont-title-2 {
+}
+.vision-2-cont-title-3 {
+}
+.vision2click {
   background-color: #39c283;
   color: #fff;
   border-radius: 40px;
@@ -107,7 +159,7 @@
   top: 85%;
   left: 60%;
 }
-.vision2click:hover{
+.vision2click:hover {
   background-color: #22905d;
   cursor: pointer;
 }
@@ -140,7 +192,7 @@
   width: 900px;
   height: 500px;
 } */
-.vision-bold{
+.vision-bold {
   font-weight: 900;
   font-size: 1.875rem;
 }

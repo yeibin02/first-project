@@ -13,5 +13,16 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+      100: {
+        slidesPerView: 1,
+      },
+      720: {
+        slidesPerView: 2,
+      },
+      960: {
+        slidesPerView: 3,
+      },
+    },
   });
 });
