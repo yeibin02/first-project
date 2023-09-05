@@ -1,11 +1,17 @@
 // vision-1
 $(document).ready(function () {
   let vision1button = $(".vision1contButton");
+  const vision1cont1 = $(".vision-1-cont-1");
   const vision1cont2 = $(".vision-1-cont-2");
 
   $(".vision1contButton").click(function () {
+    vision1cont1.css({
+      display: "none",
+    })
     vision1cont2.css({
-      display: "block",
+      top : "80px",
+      opacity: "1",
+      transition: "all 2s",
     });
   });
 });
