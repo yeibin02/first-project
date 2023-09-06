@@ -30,4 +30,23 @@ $(document).ready(function () {
     },
     offset: "80%",
   });
+  // 스크롤 위치에서 배경 색상 변경을 처리하는 함수
+  function handleScroll() {
+    const menu = document.querySelector(".gotop");
+    const scrollHeight = window.scrollY;
+
+    // 스크롤 위치가 특정 높이 이상인 경우 배경 색상 변경
+    if (scrollHeight > 2851) {
+      // 원하는 높이로 변경
+      menu.style.backgroundColor = "#4867CA"; // 변경할 배경 색상 설정
+    } else {
+      menu.style.backgroundColor = "#39c283"; // 초기 배경 색상 설정
+    }
+    if (scrollHeight > 5662) {
+      menu.style.backgroundColor = "#000";
+    }
+  }
+
+  // 스크롤 이벤트 리스너 등록
+  window.addEventListener("scroll", handleScroll);
 });

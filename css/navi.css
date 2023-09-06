@@ -23,21 +23,31 @@ navi ul li {
 }
 navi ul li a {
     text-decoration: none;
-    color: #000;
+    color: #39c283;
     font-size: 0.83333333vw;
 }
 navi ul li a::after{
-    content: "·";
-    color: #000;
-    width: 0.26041667vw;
-    height: 0.10416667vw;
+    display: inline-block;
+    content: "";
+    background-color: transparent;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    border: solid 1px #39c283;
+    opacity: 1;
+}
+navi ul li a:hover::after{
+    background: url("../images/favicon_io/favicon-16x16.png") no-repeat bottom;
+    background-size: 1vw auto;
+    width: 1vw;
+    height: 1vw;
     opacity: 1;
 }
 navi ul li a .hover-text {
     margin-right: 0.52083333vw;
     opacity: 0; /* 초기에는 숨김 */
-    color: #000;
-    padding: 0.26041667vw;
+    color: #39c283;
+    padding: 0.16041667vw;
     border-radius: 0.15625000vw;
     transition: opacity 0.3s; /* 호버 시에 투명도 전환 효과 */
 }

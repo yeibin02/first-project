@@ -54,6 +54,7 @@
     background-size: cover;
     transition: all 0.5s;
     border-radius: 0.52083333vw;
+    cursor: pointer;
   }
   .news-box-2 {
     position: relative;
@@ -72,6 +73,7 @@
     background-size: cover;
     transition: all 0.5s;
     border-radius: 0.52083333vw;
+    cursor: pointer;
   }
   .news-box-3 {
     position: relative;
@@ -90,4 +92,5 @@
     background-size: cover;
     transition: all 0.5s;
     border-radius: 0.52083333vw;
+    cursor: pointer;
   }
