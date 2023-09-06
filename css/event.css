@@ -26,7 +26,7 @@
   z-index: 9999;
 }
 #container {
-  width: 26.04166667vw;
+  width: 500px;
   margin: 0 auto;
 }
 /* 
@@ -175,12 +175,12 @@ input[type="email"] {
   input[type="text"],
   input[type="email"] {
     float: left;
-    min-width: 320px;
+    min-width: 100px;
     min-height: 30px;
     border: 1px solid #aaa;
     border-radius: 5px;
-    padding: 2px;
-    margin: 0px;
+    padding: 5px;
+    margin: 10px 0;
     outline: none;
   }
   .title h2 {
@@ -223,5 +223,4 @@ input[type="email"] {
   #buttons > li:hover #cancel {
     background-color: #3ac284;
   }
-
 }
