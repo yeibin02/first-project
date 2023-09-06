@@ -151,7 +151,7 @@ input[type="email"] {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 4.16666667vw;
-  font-size: 1.14583333vw;
+  font-size: 20px;
   font-family: "NanumSquareRound";
   font-weight: bold;
   border: 0;
@@ -222,5 +222,44 @@ input[type="email"] {
   }
   #buttons > li:hover #cancel {
     background-color: #3ac284;
+  }
+}
+@media screen and (max-width: 1440px) {
+  #openBtn {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #openBtn {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #openBtn {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 760px) {
+  #openBtn {
+    bottom: 2.52083333vw;
+    width: 60px;
+    height: 25px;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #openBtn {
+    bottom: 1.42083333vw;
+    width: 60px;
+    height: 25px;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #openBtn {
+    bottom: 1.82083333vw;
+    width: 50px;
+    height: 20px;
+    font-size: 10px;
   }
 }

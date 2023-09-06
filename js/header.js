@@ -109,12 +109,12 @@ $(document).ready(function () {
   // let prevScrollPos = window.pageYOffset; // 이전 스크롤 위치 초기화
   // dom (html 태그 로딩 완료 후 실행)
   // 각 섹션의 위치값(세로스크롤 위치)
-  const sectionYpos = [960, 1920, 6720];
-  
+  const sectionYpos = [960, 2851, 6662];
+
   // 클래스 nav 의 li 를 찾아라
   // 저장한다. 재활용하기 위해서
   const navLis = $(".nav ul li");
-  
+
   // li 에 a 태그를 클릭을 해서 스크롤을 이동
   const navLisA = $(".nav ul li a");
   // 클릭 기능 구현
@@ -139,4 +139,3 @@ $(document).ready(function () {
     });
   });
 });
-

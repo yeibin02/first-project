@@ -22,10 +22,56 @@
 .visual-bg-1 {
   background: url("../images/campaign_banner.png") no-repeat center;
   background-size: cover;
+  position: relative;
 }
 .visual-bg-2 {
   background: url("../images/goods_banner.png") no-repeat center;
   background-size: cover;
+  position: relative;
+}
+.visual-bg-1 button{
+  width: 13.02083333vw;
+  height: 3.64583333vw;
+  border-radius: 2.60416667vw;
+  border: solid 0.10416667vw #000000;
+  position: absolute;
+  bottom: 8.05416667vw;
+  left: 24.44791667vw;
+  transform: translateX(-50%);
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.40625000vw;
+  font-family: 'NanumSquareRound';
+  font-weight: 900;
+  color: #000000;
+  letter-spacing: 0.10416667vw;
+}
+.visual-bg-1 button:hover{
+  background-color: #e1598f;
+  color: #fff;
+  border: 0;
+}
+.visual-bg-2 button{
+  width: 13.02083333vw;
+  height: 3.64583333vw;
+  border-radius: 2.60416667vw;
+  border: solid 0.10416667vw #000000;
+  position: absolute;
+  bottom: 18.22916667vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.40625000vw;
+  font-family: 'NanumSquareRound';
+  font-weight: 900;
+  color: #000000;
+  letter-spacing: 0.10416667vw;
+}
+.visual-bg-2 button:hover{
+  background-color: #e1598f;
+  color: #fff;
+  border: 0;
 }
 
 /* 반응형 */
@@ -49,7 +95,32 @@
     background-size: 100%;
   }
 }
-  @media all and (min-width: 360px) {
+@media all and (max-width:575px) {
+  .visual-bg-1 button{
+    width: 16.02083333vw;
+    height: 4.84583333vw;
+  }
+  .visual-bg-2 button{
+    width: 16.02083333vw;
+    height: 4.84583333vw;
+    bottom: 17vw;
+  }
+}
+  @media all and (max-width: 454px) {
+    .visual-bg-1 button{
+      width: 16.02083333vw;
+      height: 8.04583333vw;
+      position: absolute;
+      bottom: 6vw;
+    }
+    .visual-bg-2 button{
+      width: 16.02083333vw;
+      height: 8.04583333vw;
+      position: absolute;
+      bottom: 15vw;
+    }
+  }
+  @media all and (max-width: 360px) {
     .visual {
       width: 100%;
       height: 80%;

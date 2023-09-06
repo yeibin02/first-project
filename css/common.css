@@ -12,30 +12,124 @@
 }
 .gotop {
   display: flex;
-  right: 20px;
-  bottom: 20px;
+  right: 1.04166667vw;
+  bottom: 1.04166667vw;
   justify-content: center;
   align-items: center;
   position: fixed;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: #39c283;
   border: 0;
-  color: #fff;
-  font-size: 20px;
-  line-height: 60px;
+  line-height: 3.125vw;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
   transition: bottom 0.3s, visibility 0.3s, opacity 0.3s;
   z-index: 9;
+  transition: background-color 0.3s ease; /* 배경 색상 변경 애니메이션 */
+}
+.gotop p {
+  margin-top: 4px;
+  font-size: 20px;
+  color: #fff;
 }
 .gotop.active {
-  bottom: 20px;
+  bottom: 1.04166667vw;
   visibility: visible;
   opacity: 1;
 }
 .gotop.active-footer {
   bottom: 120px !important;
 }
+
+/* 반응형 */
+@media all and (max-width: 1280px) {
+  .gotop {
+    width: 50px;
+    height: 50px;
+  }
+  .gotop p {
+    margin-top: 4px;
+    font-size: 16px;
+  }
+  .gotop.active-footer {
+    bottom: 120px !important;
+  }
+}
+@media all and (max-width: 1024px) {
+  .gotop {
+    width: 40px;
+    height: 40px;
+  }
+  .gotop p {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+  .gotop.active-footer {
+    bottom: 140px !important;
+  }
+}
+@media screen and (max-width: 1010px) {
+  .gotop {
+    width: 40px;
+    height: 40px;
+  }
+  .gotop p {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+  .gotop.active-footer {
+    bottom: 190px !important;
+  }
+}
+@media all and (max-width: 760px) {
+  .gotop {
+    width: 35px;
+    height: 35px;
+  }
+  .gotop p {
+    margin-top: 2px;
+    font-size: 10px;
+  }
+  .gotop.active-footer {
+    bottom: 190px !important;
+  }
+}
+@media all and (max-width: 480px) {
+  .gotop {
+    width: 30px;
+    height: 30px;
+  }
+  .gotop p {
+    margin-top: 2px;
+    font-size: 6px;
+  }
+  .gotop.active-footer {
+    bottom: 190px !important;
+  }
+}
+@media all and (max-width: 360px) {
+  .gotop {
+    width: 30px;
+    height: 30px;
+  }
+  .gotop p {
+    margin-top: 1px;
+    font-size: 6px;
+  }
+  .gotop.active-footer {
+    bottom: 190px !important;
+  }
+}
+
+/*
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 760px) {
+}
+@media all and (max-width: 480px) {
+} */
