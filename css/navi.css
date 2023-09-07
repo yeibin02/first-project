@@ -1,62 +1,66 @@
 navi {
-    scroll-behavior: smooth; /* 부드러운 스크롤 활성화 */
-    z-index: 99999;
-    background-color: transparent;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    width: 18.41666667vw;
-    height: auto;
-    margin-right: 1.04166667vw;
-    overflow-y: auto;
-    text-align: right;
-    display: inline-block;
+  scroll-behavior: smooth; /* 부드러운 스크롤 활성화 */
+  z-index: 99999;
+  background-color: transparent;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 18.41666667vw;
+  height: auto;
+  margin-right: 1.04166667vw;
+  overflow-y: auto;
+  text-align: right;
+  display: inline-block;
 }
 navi ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 navi ul li {
-    padding: 0.26041667vw;
-    border-radius: 50%;
+  padding: 0.26041667vw;
+  border-radius: 50%;
 }
 navi ul li a {
-    text-decoration: none;
-    color: #39c283;
-    font-size: 0.83333333vw;
+  text-decoration: none;
+  color: #39c283;
+  font-size: 0.83333333vw;
 }
-navi ul li a::after{
-    display: inline-block;
-    content: "";
-    background-color: transparent;
-    width: 1vw;
-    height: 1vw;
-    border-radius: 50%;
-    border: solid 1px #39c283;
-    opacity: 1;
+navi ul li a::after {
+  display: inline-block;
+  content: "";
+  background-color: transparent;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  border: solid 1px #39c283;
+  opacity: 1;
 }
-navi ul li a:hover::after{
-    background: url("../images/favicon_io/favicon-16x16.png") no-repeat bottom;
-    background-size: 1vw auto;
-    width: 1vw;
-    height: 1vw;
-    opacity: 1;
+navi ul li a:hover::after {
+  background: url("../images/favicon_io/favicon-16x16.png") no-repeat bottom;
+  background-size: 1vw auto;
+  width: 1vw;
+  height: 1vw;
+  opacity: 1;
 }
 navi ul li a .hover-text {
-    margin-right: 0.52083333vw;
-    opacity: 0; /* 초기에는 숨김 */
-    color: #39c283;
-    padding: 0.16041667vw;
-    border-radius: 0.15625000vw;
-    transition: opacity 0.3s; /* 호버 시에 투명도 전환 효과 */
+  margin-right: 0.52083333vw;
+  opacity: 0; /* 초기에는 숨김 */
+  color: #39c283;
+  padding: 0.16041667vw;
+  border-radius: 0.15625vw;
+  transition: opacity 0.3s; /* 호버 시에 투명도 전환 효과 */
 }
 navi ul li a:hover .hover-text {
-    opacity: 1; /* 호버 시에 보이도록 변경 */
+  opacity: 1; /* 호버 시에 보이도록 변경 */
+}
+.active .hover-text {
+  /* 활성화된 섹션에서 .hover-text의 스타일을 변경합니다. */
+  opacity: 1;
 }
 #section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

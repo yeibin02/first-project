@@ -10,45 +10,50 @@ $(document).ready(function () {
     header.classList.add("active");
     mbt.classList.add("active");
   }
-  window.addEventListener(
-    "scroll",
-    function () {
-      scy = this.document.documentElement.scrollTop;
-      if (scy > 0) {
+
+  // 스크롤 했을때 헤더 사라졌다가 나왔다가하는 코드
+  let prevScrollPos = window.pageYOffset;
+  function handleScroll() {
+    const currentScrollPos = window.pageYOffset;
+    if (currentScrollPos <= 0) {
+      header.style.top = "0"; // 스크롤이 맨 위일 때 헤더 고정
+    } else if (prevScrollPos > currentScrollPos) {
+      header.style.top = "0"; // 스크롤을 올릴 때 헤더를 보이게 함
+    } else {
+      header.style.top = "-100px"; // 스크롤을 내릴 때 헤더를 숨김
+    }
+    prevScrollPos = currentScrollPos;
+  }
+
+  // 초기화할 때 한 번 호출하여 현재 스크롤 위치에 따라 헤더를 설정
+  handleScroll();
+
+  // 스크롤 이벤트 리스너를 등록하여 스크롤 시 헤더를 조절
+  window.addEventListener("scroll", handleScroll);
+
+  // 초기화할 때 한 번 호출하여 현재 스크롤 위치에 따라 헤더를 설정
+  handleScroll();
+
+  // 스크롤 이벤트 리스너를 등록하여 스크롤 시 헤더를 조절
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", function () {
+    scy = this.document.documentElement.scrollTop;
+    if (scy > 0) {
+      header.classList.add("active");
+      mbt.classList.add("active");
+    } else {
+      const state = navMb.classList.contains("active");
+      if (state) {
+        // 만약에 모바일 메뉴가 펼쳐진 상태라면
         header.classList.add("active");
         mbt.classList.add("active");
       } else {
-        const state = navMb.classList.contains("active");
-        if (state) {
-          // 만약에 모바일 메뉴가 펼쳐진 상태라면
-          header.classList.add("active");
-          mbt.classList.add("active");
-        } else {
-          // 그렇지 않다면 원래대로 처리하고..
-          header.classList.remove("active");
-          mbt.classList.remove("active");
-        }
+        // 그렇지 않다면 원래대로 처리하고..
+        header.classList.remove("active"); // 이 부분을 수정하여 헤더가 스크롤을 올릴 때 숨지 않게 합니다.
+        mbt.classList.remove("active");
       }
-
-      const scrollTop = window.pageYOffset; // 현재 스크롤 위치
-      if (scrollTop === 0) {
-        gnb.style.transform = "translateY(0)";
-      } else {
-        gnb.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 gnb 숨기기
-      }
-      if (scrollTop === 0) {
-        logo.style.transform = "translateY(0)";
-      } else {
-        logo.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 logo 숨기기
-      }
-      if (scrollTop === 0) {
-        mbt.style.transform = "translateY(0)";
-      } else {
-        mbt.style.transform = "translateY(-300%)"; // 스크롤 내릴 때 mbt 숨기기
-      }
-    },
-    { passive: true }
-  );
+    }
+  });
 
   // 모바일 메뉴 클릭 처리
   const htmlRoot = document.querySelector("html");
