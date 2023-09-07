@@ -6,16 +6,22 @@
   justify-content: space-between;
   align-items: center;
 }
+.footer_menu{
+  margin-right: 150px;
+}
+.footer_menu a{
+  padding: 0 60px;
+}
 .footer p,
 .footer a {
   color: #fff;
   font-size: 17px;
 }
 .copylight {
-  margin-left: 90px;
+  margin-left: 40px;
 }
 .sns-wrap {
-  margin-right: 90px;
+  margin-right: 40px;
   width: 180px;
   position: relative;
   display: flex;
