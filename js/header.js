@@ -20,10 +20,22 @@ $(document).ready(function () {
     } else if (prevScrollPos > currentScrollPos) {
       header.style.top = "0"; // 스크롤을 올릴 때 헤더를 보이게 함
     } else {
-      header.style.top = "-100px"; // 스크롤을 내릴 때 헤더를 숨김
+      header.style.top = "-960px"; // 스크롤을 내릴 때 헤더를 숨김
     }
     prevScrollPos = currentScrollPos;
   }
+
+  // const scrollTop = window.pageYOffset; // 현재 스크롤 위치
+  // if (scrollTop === 0) {
+  //   navMb.style.transform = "translateY(0)";
+  // } else {
+  //   navMb.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 nav- 숨기기
+  // }
+  // if (scrollTop === 0) {
+  //   mbt.style.transform = "translateY(0)";
+  // } else {
+  //   mbt.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 mbt 숨기기
+  // }
 
   // 초기화할 때 한 번 호출하여 현재 스크롤 위치에 따라 헤더를 설정
   handleScroll();

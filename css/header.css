@@ -63,7 +63,7 @@
   position: absolute;
   display: none;
   right: 1.04166667vw;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   width: 1.5625vw;
   height: 1.14583333vw;
@@ -171,7 +171,7 @@
     display: none;
   }
   .mbt span {
-    width: 4.15vw;
+    width: 3.45vw;
     height: 0.2016667vw;
   }
   .mbt {
@@ -180,7 +180,7 @@
     height: 1.14583333vw;
     margin-top: 0.3vw;
     margin-right: 2vw;
-    padding: 1.5vw 0;
+    padding: 1.2vw 0;
   }
   .nav-mb.active {
     left: 70% !important;
