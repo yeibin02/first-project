@@ -81,6 +81,7 @@
   height: 0.10416667vw;
   background-color: #000;
   transition: background 0.3s;
+  z-index: 9999999;
 }
 .mbt.active span {
   background-color: #222 !important;
@@ -112,30 +113,31 @@
 /* 모바일 gnb */
 .nav-mb {
   position: absolute;
-  top: 4.54583333vw;
+  top: 0;
   left: 100%;
   display: block;
-  width: 20%;
-  height: calc(100vh - 4.08583333vw);
-  background-color: #fff;
+  width: 40%;
+  height: 50vw;
+  background-color: rgba(255, 255, 255);
   opacity: 0;
   transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: -1;
 }
 .nav-mb.active {
   left: 83% !important;
   opacity: 1 !important;
 }
 .nav-mb-gnb li {
-  line-height: 3.48958333vw;
+  margin-top: 6vw;
+  line-height: 4.48958333vw;
 }
 .nav-mb-gnb li a {
   display: block;
   padding: 0 2.08333333vw;
   font-size: 1.25vw;
-  color: #222;
-  border-bottom: 0.05208333vw solid #e5e5e5;
+  color: #000000;
+  border-bottom: 0.05208333vw solid #cecece;
 }
-
 
 /* 반응형 */
 @media all and (max-width: 1280px) {
@@ -162,33 +164,37 @@
   }
 }
 @media all and (max-width: 960px) {
-  .logo{
+  .logo {
     margin-left: -1.9vw;
   }
   .gnb {
     display: none;
   }
   .mbt span {
-    width: 100%;
-    height: 0.0816667vw;
+    width: 4.15vw;
+    height: 0.2016667vw;
   }
   .mbt {
     display: block;
-    width: 1.5625vw;
+    width: 2.5825vw;
     height: 1.14583333vw;
-    margin-top: -0.8vw;
-}
-}
-@media all and (max-width: 360px) {
-  .mbt span {
-    width: 100%;
-    height: 0.1416667vw;
+    margin-top: 0.3vw;
+    margin-right: 2vw;
+    padding: 1.5vw 0;
   }
-  .mbt {
-    display: block;
-    width: 2.0625vw;
-    height: 1.64583333vw;
+  .nav-mb.active {
+    left: 70% !important;
+    opacity: 1 !important;
+  }
+  .nav-mb-gnb li a {
+    font-size: 16px;
+    margin-top: 20px;
+  }
 }
+@media all and (max-width: 460px) {
+  .nav-mb-gnb li a {
+    font-size: 10px;
+  }
 }
 
 /* @media all and (max-width: 1920px) {
