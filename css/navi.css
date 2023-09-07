@@ -1,4 +1,4 @@
-navi {
+.navi {
   scroll-behavior: smooth; /* 부드러운 스크롤 활성화 */
   z-index: 99999;
   background-color: transparent;
@@ -13,20 +13,20 @@ navi {
   text-align: right;
   display: inline-block;
 }
-navi ul {
+.navi ul {
   list-style: none;
   padding: 0;
 }
-navi ul li {
+.navi ul li {
   padding: 0.26041667vw;
   border-radius: 50%;
 }
-navi ul li a {
+.navi ul li a {
   text-decoration: none;
   color: #39c283;
   font-size: 0.83333333vw;
 }
-navi ul li a::after {
+.navi ul li a::after {
   display: inline-block;
   content: "";
   background-color: transparent;
@@ -36,14 +36,14 @@ navi ul li a::after {
   border: solid 1px #39c283;
   opacity: 1;
 }
-navi ul li a:hover::after {
+.navi ul li a:hover::after {
   background: url("../images/favicon_io/favicon-16x16.png") no-repeat bottom;
   background-size: 1vw auto;
   width: 1vw;
   height: 1vw;
   opacity: 1;
 }
-navi ul li a .hover-text {
+.navi ul li a .hover-text {
   margin-right: 0.52083333vw;
   opacity: 0; /* 초기에는 숨김 */
   color: #39c283;
@@ -51,13 +51,30 @@ navi ul li a .hover-text {
   border-radius: 0.15625vw;
   transition: opacity 0.3s; /* 호버 시에 투명도 전환 효과 */
 }
-navi ul li a:hover .hover-text {
+.navi ul li a:hover .hover-text {
   opacity: 1; /* 호버 시에 보이도록 변경 */
 }
-.active .hover-text {
-  /* 활성화된 섹션에서 .hover-text의 스타일을 변경합니다. */
-  opacity: 1;
+
+/* 포커스 유지 */
+.navi-active .hover-text {
+  margin-right: 0.52083333vw !important;
+  opacity: 1 !important; /* 초기에는 숨김 */
+  color: #39c283 !important;
+  padding: 0.16041667vw !important;
+  border-radius: 0.15625vw !important;
+  transition: opacity 0.3s !important; /* 호버 시에 투명도 전환 효과 */
 }
+.navi-active .hover-text {
+  opacity: 1 !important;
+}
+.navi-active::after {
+  background: url("../images/favicon_io/favicon-16x16.png") no-repeat bottom !important;
+  background-size: 1vw auto !important;
+  width: 1vw !important;
+  height: 1vw !important;
+  opacity: 1 !important;
+}
+
 #section {
   height: 100vh;
   display: flex;
