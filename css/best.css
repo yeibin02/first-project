@@ -1,7 +1,7 @@
 /* 베스트 */
 .best{
     width: 100vw;
-    /* height: 50vw; */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -33,10 +33,10 @@
     height: auto;
 }
 .best-slide-wrap{
+    height: auto;
 }
 .best-swiper-slide{
-    display: flex;
-    justify-content: center;
+    height: auto;
 }
 .bestNextButton,
 .bestPrevButton{
