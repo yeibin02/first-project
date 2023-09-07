@@ -7,7 +7,6 @@
   justify-content: space-around;
   align-items: center;
   position: relative;
-  padding-bottom: 5vw;
 }
 .best .inner {
   padding: 0 50px;
@@ -20,7 +19,7 @@
   font-size: 3.8vw;
   color: #39c283;
   font-family: "yg-jalnan";
-  margin: 5vw auto;
+  margin: 2vw auto;
   margin-bottom: 1vw;
 }
 .best-subtitle {
@@ -58,7 +57,7 @@
     z-index: 99999;
     right: 20%;
   }
-  .bestPrevButton{
+  .bestPrevButton {
     color: #39c283;
     top: 70%;
     z-index: 99999;
