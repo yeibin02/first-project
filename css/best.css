@@ -1,7 +1,7 @@
 /* 베스트 */
 .best{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -11,29 +11,66 @@
 .best-title{
     width: 50vw;
     text-align: center;
-    height: 10.4166vh;
-    font-size: 4.375rem;
+    /* height: 10.4166vh; */
+    font-size: 3.8vw;
     color: #39c283;
     font-family: 'yg-jalnan';
-    margin: 50px auto;
-    margin-bottom: 20px;
+    margin: 60px auto;
+    margin-bottom: 1vw;
 }
 .best-subtitle{
     text-align: center;
-    font-size: 40px;
-    padding-bottom: 20px;
+    font-size: 2.5vw;
+    padding-bottom: 3vw;;
     color: #333;
 }
 .best-slide{
     height: auto;
 }
 .best-slide-wrap{
-    height: auto;
+    height: 30vw;
 }
 .best-swiper-slide{
-    height: auto;
+    height: 20vw;
 }
 .bestNextButton,
 .bestPrevButton{
     color: #39c283;
 }
+
+  @media screen and (max-width : 960px) {
+    .best-slide-wrap{
+        height: 30vw;
+    }
+    .best-swiper-slide{
+        height: 30vw;
+    }
+    .best-title{
+        margin: 3vw auto;
+    }
+    .best-subtitle{
+        padding-bottom: 2vw;
+    }
+  }
+  @media screen and (max-width : 480px) {
+    .best-slide-wrap{
+        height: 200px;
+    }
+    .best-swiper-slide{
+        height: 200px;
+    }
+    .best-title{
+        margin: 3vw auto;
+    }
+    .best-subtitle{
+        padding-bottom: 2vw;
+    }
+    .best-swiper-slide{
+        display: flex;
+    }
+    .best-swiper-slide img{
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+    }
+  }

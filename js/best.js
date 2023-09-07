@@ -17,7 +17,7 @@ $(document).ready(function () {
       100: {
         slidesPerView: 1,
       },
-      720: {
+      480: {
         slidesPerView: 2,
       },
       960: {
