@@ -9,7 +9,7 @@ $(document).ready(function () {
       display: "none",
     })
     vision1cont2.css({
-      top : "80px",
+      top : "5vw",
       opacity: "1",
       transition: "all 2s",
     });
