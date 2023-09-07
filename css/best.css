@@ -1,39 +1,50 @@
 /* 베스트 */
 .best{
     width: 100vw;
-    height: 100vh;
+    /* height: 50vw; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     position: relative;
+    padding-bottom: 5vw;
+}
+.best .inner{
+    padding: 0 50px;
+    position: relative;
 }
 .best-title{
     width: 50vw;
     text-align: center;
-    height: 10.4166vh;
-    font-size: 4.375rem;
+    /* height: 10.4166vh; */
+    font-size: 3.8vw;
     color: #39c283;
     font-family: 'yg-jalnan';
-    margin: 50px auto;
-    margin-bottom: 20px;
+    margin: 5vw auto;
+    margin-bottom: 1vw;
 }
 .best-subtitle{
     text-align: center;
-    font-size: 40px;
-    padding-bottom: 20px;
+    font-size: 2.5vw;
+    padding-bottom: 3vw;
     color: #333;
 }
 .best-slide{
     height: auto;
 }
 .best-slide-wrap{
-    height: auto;
 }
 .best-swiper-slide{
-    height: auto;
+    display: flex;
+    justify-content: center;
 }
 .bestNextButton,
 .bestPrevButton{
     color: #39c283;
+    top: 70%;
+}
+.best-slide img{
+    width: 20vw;
+    width: 100%;
+    height: 100%;
 }
