@@ -1,20 +1,28 @@
 .vision-1 {
   width: 100vw;
-  /* height: 100vh; */
-  height: 960px;
+  height: 50vw;
   color: #333;
   margin: 0 auto;
+  position: relative;
+}
+.vision-1 .inner{
+  position: relative;
 }
 /* vision-1 */
 .vision-1-title {
+  width: 50vw;
   text-align: center;
-  height: 26.0416vh;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  margin: 0 auto;
+  /* margin-left: 20vw; */
+  transform: translateX(-50%);
+  padding-top: 5vw;
+  /* display: inline-block; */
+  margin-bottom: 3.8vw;
 }
 .vision-1-title h3 {
-  font-size: 4.375rem;
+  font-size: 3.8vw;
   color: #39c283;
   font-family: "yg-jalnan";
 }
@@ -26,57 +34,36 @@
 }
 .vision-1-title p {
   color: #333;
-  font-size: 6vw;
+  font-size: 3vw;
   font-family: "NanumSquareRound";
-}
-@media screen and (max-width : 1920px) {
-  .vision-1-title p {
-    font-size:2.5vw;
-  }
-  .vision-1-cont {
-    font-size: 1.5vw;
-  }
-}
-@media screen and (max-width : 960px) {
-  .vision-1-title p {
-    font-size:5vw;
-  }
-  .vision-1-cont {
-    font-size: 3.5vw;
-  }
-}
-@media screen and (max-width : 480px) {
-  .vision-1-title p {
-    font-size:7vw;
-  }
-  .vision-1-cont {
-    font-size: 5vw;
-  }
 }
 .vision-1-cont {
   background-color: #f7ffef;
   width: 100%;
-  height: 52.0833vh;
+  height: 25vw;
   /* margin: 0 auto; */
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-size: 2.1875rem;
-  border-radius: 100px;
-  margin-top: 50px;
+  /* font-size: 2.1875rem; */
+  font-size: 2vw;
+  border-radius: 5vw;
+  /* margin-top: 5vw; */
   overflow: hidden;
   position: relative;
 }
 .vision-1-cont-1 span {
   color: #39c283;
-  font-size: 50px;
+  /* font-size: 50px; */
   font-weight: 600;
 }
 .vision-1-cont-2 {
+  width: 90%;
+  margin: 0 auto;
   position: absolute;
   top: 53vh;
-  left: 12%;
+  left: 1vw;
   opacity: 0;
   transition: all 2s;
 }
@@ -85,15 +72,15 @@
 }
 .vision1contButton {
   position: absolute;
-  bottom: -50px;
-  left: 48%;
+  bottom: -3.5vw;
+  left: 46%;
   background-color: #39c283;
-  width: 100px;
-  height: 100px;
+  width: 7vw;
+  height: 7vw;
   color: #fff;
   border: none;
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 2vw;
   font-weight: 600;
   margin: 0 auto;
 }
@@ -105,10 +92,10 @@
 /* vision-2 */
 .vision-2 {
   width: 100%;
-  height: 100vh;
+  height: 50vw;
   position: relative;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 5vw;
   overflow: hidden;
   color: #333;
 }
@@ -121,40 +108,18 @@
 }
 
 .vision-2-title h3 {
-  font-size: 4.5625rem;
+  font-size: 3.8vw;
   color: #39c283;
   font-family: "yg-jalnan";
 }
-.vision-2-cont-title {
-  width: 31.25vw;
-  height: 26.0416vh;
-  line-height: 250px;
-  text-align: center;
-  font-size: 6.25rem;
-  font-weight: 900;
-  color: #39c283;
-  /* background-color: #f7ffef; */
-  background-color: #fff;
-  position: absolute;
-  top: 40%;
-  left: 5%;
-  padding: 0 30px;
-  border-radius: 30px;
-}
-/* .vision-2-cont-title-1 {
-}
-.vision-2-cont-title-2 {
-}
-.vision-2-cont-title-3 {
-} */
 .vision2click {
   background-color: #39c283;
   color: #fff;
   border-radius: 40px;
-  width: 200px;
-  height: 80px;
+  width: 10vw;
+  height: 5vw;
   border: none;
-  font-size: 30px;
+  font-size: 2vw;
   position: absolute;
   top: 85%;
   left: 60%;
@@ -164,35 +129,56 @@
   cursor: pointer;
 }
 .vision-2-cont {
-  padding: 50px 80px;
+  padding: 3vw 5vw;
   background-color: #f7ffef;
-  border-radius: 100px;
+  border-radius: 5vw;
   position: absolute;
   top: 35%;
-  left: 40%;
-  font-size: 1.75rem;
+  left: 40vw;
+  font-size: 1.5vw;
   width: 52.0833vw;
-  height: 41.6666vh;
+  height: 22vw;
   overflow: hidden;
   text-align: left;
   line-height: 2;
 }
-/* .vision-2-cont > div {
-  display: none; 
-} */
-/* .vision-2-cont-1 {
-  width: 900px;
-  height: 500px;
-}
-.vision-2-cont-2 {
-  width: 900px;
-  height: 500px;
-}
-.vision-2-cont-3 {
-  width: 900px;
-  height: 500px;
-} */
 .vision-bold {
   font-weight: 900;
-  font-size: 1.875rem;
+  font-size: 1.6vw;
 }
+/* @media screen and (max-width : 1920px) {
+  .vision-2-title h3 {
+    font-size:2.5vw;
+  }
+  .vision-2-cont {
+    font-size: 1.5vw;
+  }
+}
+@media screen and (max-width : 720px) {
+
+}
+@media screen and (max-width : 480px) {
+  .vision-2-title h3 {
+    font-size:7vw;
+  }
+  .vision2click{
+    left: 32%;
+  }
+  .vision-2-cont {
+    font-size: 1.5vw;
+  }
+  .earthwrap{
+    width: 480px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    top: 60%;
+    left: -30%;
+  }
+  #vision2Earth{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+} */
