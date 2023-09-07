@@ -8,10 +8,6 @@
     position: relative;
     padding-bottom: 5vw;
 }
-.best .inner{
-    padding: 0 50px;
-    position: relative;
-}
 .best-title{
     width: 50vw;
     text-align: center;
@@ -28,8 +24,13 @@
     padding-bottom: 3vw;
     color: #333;
 }
+.swipertotalwrap{
+    position: relative;
+    padding: 0 50px;
+}
 .best-slide{
     height: auto;
+    z-index: 999;
 }
 .best-swiper-slide{
     display: flex;
@@ -38,7 +39,6 @@
 .bestNextButton,
 .bestPrevButton{
     color: #39c283;
-    top: 70%;
 }
 .best-slide img{
     width: 20vw;
