@@ -1,47 +1,53 @@
-// 현재 활성화된 섹션을 추적하는 변수를 선언합니다.
-let activeSection = null;
+// 스크롤이 되어질때 메뉴 포커스 유지하기
+window.addEventListener("load", function () {
+  // 활성화 될 메뉴 번호
+  let navActiveIndex = 0;
+  // 메뉴 태그 a
+  const navAtags = $(".navi ul li a");
+  //   $.each(navAtags, function (index, item) {
+  //     $(this).click(function () {
+  //       navAtags.removeClass("navi-active");
+  //       $(this).addClass("navi-active");
+  //     });
+  //   });
 
-// 각 섹션의 위치 정보를 저장할 객체를 생성합니다.
-const sectionPositions = {};
+  const sectionTags = $("section");
 
-// 각 섹션의 위치 정보를 계산하여 객체에 저장합니다.
-function calculateSectionPositions() {
-  const sections = document.querySelectorAll(".section");
-  sections.forEach((section) => {
-    const sectionId = section.id;
-    const sectionTop = section.offsetTop;
-    sectionPositions[sectionId] = sectionTop;
-  });
-}
-
-// 스크롤 이벤트 리스너를 추가합니다.
-window.addEventListener("scroll", function () {
-  // 스크롤 위치를 가져옵니다.
-  const scrollPosition = window.scrollY;
-
-  // 각 섹션의 위치 정보를 가져옵니다.
-  calculateSectionPositions();
-
-  // 현재 스크롤 위치에 따라 어떤 섹션에 있는지 확인합니다.
-  for (const sectionId in sectionPositions) {
-    if (scrollPosition >= sectionPositions[sectionId]) {
-      // 스크롤 위치가 해당 섹션의 위치를 넘었을 때,
-      // sectionId 변수에 현재 섹션의 ID가 할당됩니다.
-      if (activeSection !== sectionId) {
-        // 활성화된 섹션이 변경되면
-        // 이전 활성화된 섹션에서 .hover-text의 스타일을 변경합니다.
-        if (activeSection) {
-          document.getElementById(activeSection).classList.remove("active");
-        }
-        // 현재 활성화된 섹션으로 업데이트하고 스타일을 변경합니다.
-        activeSection = sectionId;
-        document.getElementById(activeSection).classList.add("active");
-      }
-      // 활성화된 섹션에서 .hover-text의 스타일을 변경합니다.
-      document
-        .getElementById(activeSection)
-        .querySelector(".hover-text")
-        .classList.add("active");
-    }
+  let sectionTagsPos = [];
+  function resetSectionYPos() {
+    // 상단으로부터 각 section의 스크롤바의 Y축 높이값 모음
+    $.each(sectionTags, function (index, item) {
+      const yPos = $(item).offset().top;
+      sectionTagsPos[index] = yPos;
+    });
+    //   임시
+    sectionTagsPos.push(50000);
   }
+  // 화면 리사이즈 위치값 파악
+  $(window).resize(function () {
+    resetSectionYPos();
+  });
+
+  function setFocusChange() {
+    const scY = $(window).scrollTop();
+    // 스크롤 된 경우의 세로 값이 어느 범위인가?
+    // console.log("==================", scY);
+    for (let i = 0; i < sectionTagsPos.length; i++) {
+      if (scY < sectionTagsPos[i + 1] && scY >= sectionTagsPos[i]) {
+        navActiveIndex = i;
+        break;
+      }
+    }
+    // 포커스 모두 지우고
+    navAtags.removeClass("navi-active");
+    navAtags.eq(navActiveIndex).addClass("navi-active");
+  }
+  // 스크롤을 하는 경우에 포커스 인덱스를 파악한다.
+  $(window).scroll(function () {
+    setFocusChange();
+  });
+
+  // 화면 새로고침시 위치값 파악
+  resetSectionYPos();
+  setFocusChange();
 });
