@@ -40,6 +40,7 @@
 .bestNextButton,
 .bestPrevButton{
     color: #39c283;
+    z-index: 9999999;
 }
 .best-slide img{
     width: 20vw;
