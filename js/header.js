@@ -25,6 +25,8 @@ $(document).ready(function () {
     prevScrollPos = currentScrollPos;
   }
 
+
+  
   // const scrollTop = window.pageYOffset; // 현재 스크롤 위치
   // if (scrollTop === 0) {
   //   navMb.style.transform = "translateY(0)";
@@ -36,6 +38,8 @@ $(document).ready(function () {
   // } else {
   //   mbt.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 mbt 숨기기
   // }
+
+
 
   // 초기화할 때 한 번 호출하여 현재 스크롤 위치에 따라 헤더를 설정
   handleScroll();
@@ -67,6 +71,8 @@ $(document).ready(function () {
     }
   });
 
+
+
   // 모바일 메뉴 클릭 처리
   const htmlRoot = document.querySelector("html");
   const navMb = document.querySelector(".nav-mb");
@@ -95,6 +101,8 @@ $(document).ready(function () {
     }
   });
 
+
+
   // 반응형 처리
   let winW = window.innerWidth;
   window.addEventListener("resize", function () {
@@ -117,6 +125,8 @@ $(document).ready(function () {
     }
   });
 
+
+
   // 선택자로 로고와 스크롤 위치를 가져옵니다.
   const logo = document.querySelector(".logo");
   const scrollPosition = 200; // 로고가 이동할 스크롤 위치
@@ -126,7 +136,7 @@ $(document).ready(function () {
   // let prevScrollPos = window.pageYOffset; // 이전 스크롤 위치 초기화
   // dom (html 태그 로딩 완료 후 실행)
   // 각 섹션의 위치값(세로스크롤 위치)
-  const sectionYpos = [960, 2851, 6662];
+  const sectionYpos = [960, 2880, 6720];
 
   // 클래스 nav 의 li 를 찾아라
   // 저장한다. 재활용하기 위해서

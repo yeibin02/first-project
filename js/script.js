@@ -42,7 +42,7 @@ $(document).ready(function () {
     } else {
       menu.style.backgroundColor = "#39c283"; // 초기 배경 색상 설정
     }
-    if (scrollHeight > 5662) {
+    if (scrollHeight > 5800) {
       menu.style.backgroundColor = "#000";
     }
   }
