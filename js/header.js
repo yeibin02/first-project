@@ -25,22 +25,6 @@ $(document).ready(function () {
     prevScrollPos = currentScrollPos;
   }
 
-
-  
-  // const scrollTop = window.pageYOffset; // 현재 스크롤 위치
-  // if (scrollTop === 0) {
-  //   navMb.style.transform = "translateY(0)";
-  // } else {
-  //   navMb.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 nav- 숨기기
-  // }
-  // if (scrollTop === 0) {
-  //   mbt.style.transform = "translateY(0)";
-  // } else {
-  //   mbt.style.transform = "translateY(-100%)"; // 스크롤 내릴 때 mbt 숨기기
-  // }
-
-
-
   // 초기화할 때 한 번 호출하여 현재 스크롤 위치에 따라 헤더를 설정
   handleScroll();
 
@@ -71,8 +55,6 @@ $(document).ready(function () {
     }
   });
 
-
-
   // 모바일 메뉴 클릭 처리
   const htmlRoot = document.querySelector("html");
   const navMb = document.querySelector(".nav-mb");
@@ -101,8 +83,6 @@ $(document).ready(function () {
     }
   });
 
-
-
   // 반응형 처리
   let winW = window.innerWidth;
   window.addEventListener("resize", function () {
@@ -125,37 +105,28 @@ $(document).ready(function () {
     }
   });
 
-
-
   // 선택자로 로고와 스크롤 위치를 가져옵니다.
   const logo = document.querySelector(".logo");
   const scrollPosition = 200; // 로고가 이동할 스크롤 위치
 
   // 스크롤 했을 때 gnb 삭제
   const gnb = document.querySelector(".gnb"); // gnb 메뉴를 감싸는 요소 선택자
-  // let prevScrollPos = window.pageYOffset; // 이전 스크롤 위치 초기화
-  // dom (html 태그 로딩 완료 후 실행)
+
   // 각 섹션의 위치값(세로스크롤 위치)
   const sectionYpos = [960, 2880, 6720];
 
-  // 클래스 nav 의 li 를 찾아라
-  // 저장한다. 재활용하기 위해서
+  // 클래스 nav 의 li 를 찾고
   const navLis = $(".nav ul li");
 
   // li 에 a 태그를 클릭을 해서 스크롤을 이동
   const navLisA = $(".nav ul li a");
+
   // 클릭 기능 구현
   $.each(navLisA, function (index, item) {
-    // item 은 a 태그를 말합니다.
-    // item 을 클릭을 할 겁니다.
     // item 은 html 태그 (jQuery 용도)
     $(this).click(function (event) {
       // a 태그의 href 막기
       event.preventDefault();
-      // li 의 모든 클래스 제거
-      // navLis.removeClass("focus-active");
-      // 클릭된 li 에 focus-active 추가하기
-      // navLis.eq(index).addClass("focus-active");
       // 2. 클릭하면 스크롤바가 움직인다.
       $("html, body").animate(
         {

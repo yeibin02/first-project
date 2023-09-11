@@ -47,29 +47,24 @@ $(document).ready(function () {
   // 초기 이미지와 텍스트 설정
   const initialImage = contentData[currentIndex].image;
   imageElement.src = initialImage;
-  contentElement.addEventListener("wheel", (event)  => {
+  contentElement.addEventListener("wheel", (event) => {
     if (!scrollLocked) {
       scrollLocked = true;
-
       const deltaY = event.deltaY;
-
       if (deltaY > 0) {
         currentIndex = (currentIndex + 1) % contentData.length;
       } else {
         currentIndex =
           (currentIndex - 1 + contentData.length) % contentData.length;
       }
-
       // 이미지와 텍스트에 트랜지션 효과를 적용
       imageElement.style.opacity = 0;
       textElement.style.opacity = 0;
       textElement.style.transform = "translateY(0px)";
-
       // 스타일 변경 후 트랜지션 완료 후에 내용 업데이트
       setTimeout(() => {
         const newImage = contentData[currentIndex].image;
         imageElement.src = newImage; // 이미지 업데이트
-
         // 크기를 조절하려면 다음과 같이 스타일을 추가하십시오.
         if (newImage === "images/bottom_logo.png") {
           imageElement.style.width = "130px"; // 원하는 크기로 조절
@@ -79,16 +74,13 @@ $(document).ready(function () {
           imageElement.style.width = "170px"; // 원래 크기로 되돌리기
           imageElement.style.height = "auto"; // 원래 크기로 되돌리기
         }
-
         textElement.innerHTML = contentData[currentIndex].text;
-
         // 트랜지션 효과 재생
         requestAnimationFrame(() => {
           imageElement.style.opacity = 1;
           textElement.style.opacity = 1;
           textElement.style.transform = "translateY(0)";
         });
-
         // 스크롤 잠금 해제
         setTimeout(() => {
           scrollLocked = false;

@@ -7,9 +7,9 @@ $(document).ready(function () {
   $(".vision1contButton").click(function () {
     vision1cont1.css({
       display: "none",
-    })
+    });
     vision1cont2.css({
-      top : "5vw",
+      top: "5vw",
       opacity: "1",
       transition: "all 2s",
     });

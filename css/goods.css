@@ -30,7 +30,7 @@
   z-index: 3;
   background: url("../images/newjeans_goods1.png") no-repeat center;
   background-size: 33.33333333vw, auto;
-  transition: transform 2s;
+  transition: transform 2s ;
   cursor: pointer;
   margin-top: 1.04166667vw;
   margin-bottom: 1.04166667vw;
@@ -47,7 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   z-index: 3;
-  gap: 2.0625vw;
+  gap: 2.06250000vw;
 }
 .goods-box-2 {
   width: 16.66666667vw;

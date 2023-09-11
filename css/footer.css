@@ -7,10 +7,10 @@
   align-items: center;
   gap: 20px;
 }
-.footer_menu {
+.footer_menu{
   margin-right: 150px;
 }
-.footer_menu a {
+.footer_menu a{
   padding: 0 60px;
 }
 .footer p,
@@ -32,11 +32,11 @@
 }
 
 /* 반응형 */
-@media all and (max-width: 1440px) {
-  .footer_menu {
+@media all and (max-width:1440px){
+  .footer_menu{
     margin-right: 30px;
   }
-  .footer_menu a {
+  .footer_menu a{
     padding: 0 30px;
   }
 }
@@ -70,7 +70,7 @@
   .sns-wrap li {
     margin: 10px;
   }
-  .footer_menu {
+  .footer_menu{
     margin-right: 0px;
   }
 }
