@@ -1,48 +1,66 @@
 /* 베스트 */
-.best{
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    padding-bottom: 5vw;
+.best {
+  width: 100vw;
+  height: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
 }
-.best .inner{
-    padding: 0 50px;
-    position: relative;
+.best .inner {
+  padding: 0 50px;
+  position: relative;
 }
-.best-title{
-    width: 50vw;
-    text-align: center;
-    /* height: 10.4166vh; */
-    font-size: 3.8vw;
-    color: #39c283;
-    font-family: 'yg-jalnan';
-    margin: 5vw auto;
-    margin-bottom: 1vw;
+.best-title {
+  width: 50vw;
+  text-align: center;
+  /* height: 10.4166vh; */
+  font-size: 3.8vw;
+  color: #39c283;
+  font-family: "yg-jalnan";
+  margin: 2vw auto;
+  margin-bottom: 1vw;
 }
-.best-subtitle{
-    text-align: center;
-    font-size: 2.5vw;
-    padding-bottom: 3vw;
-    color: #333;
+.best-subtitle {
+  text-align: center;
+  font-size: 2.5vw;
+  padding-bottom: 3vw;
+  color: #333;
 }
-.best-slide{
-    height: auto;
+.best-slide {
+  width: 100%;
+  height: auto;
 }
-.best-swiper-slide{
-    display: flex;
-    justify-content: center;
+.best-swiper-slide {
+  display: flex;
+  justify-content: center;
 }
 .bestNextButton,
-.bestPrevButton{
+.bestPrevButton {
+  color: #39c283;
+  top: 73%;
+  z-index: 99999;
+}
+.best-slide img {
+  width: 100%;
+  height: auto;
+}
+@media all and (max-width: 719px) {
+  .best-slide {
+    width: 50%;
+    height: auto;
+  }
+  .bestNextButton {
     color: #39c283;
     top: 70%;
+    z-index: 99999;
+    right: 20%;
+  }
+  .bestPrevButton {
+    color: #39c283;
+    top: 70%;
+    z-index: 99999;
+    left: 20%;
+  }
 }
-.best-slide img{
-    width: 20vw;
-    width: 100%;
-    height: 100%;
-}
-
