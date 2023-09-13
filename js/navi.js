@@ -4,12 +4,6 @@ window.addEventListener("load", function () {
   let navActiveIndex = 0;
   // 메뉴 태그 a
   const navAtags = $(".navi ul li a");
-  //   $.each(navAtags, function (index, item) {
-  //     $(this).click(function () {
-  //       navAtags.removeClass("navi-active");
-  //       $(this).addClass("navi-active");
-  //     });
-  //   });
 
   const sectionTags = $("section");
 
