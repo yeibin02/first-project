@@ -1,96 +1,96 @@
 .news {
-    position: relative;
-    display: block;
-    background-color: #fff;
-  }
-  .news .inner {
-    width: 76.04166667vw;
-    height: 50.00000000vw;
-  }
-  .news-title {
-    font-family: 'NanumSquareRound';
-    text-align: center;
-    font-size: 3.64583333vw;
-    padding: 2.60416667vw 0.00000000vw 2.60416667vw 0.00000000vw;
-    color: #4867CA;
-  }
-  .news-title span {
-    color: #4867CA;
-    font-family: 'yg-jalnan';
-  }
-  .news-wrap {
-    width: calc(100% - 1.04166667vw * 2);
-    margin: 0 auto;
-    max-width: 76.04166667vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-auto-rows: minmax(50px, auto); */
-    gap: 1.04166667vw;
-  }
-  .news-box-1 {
-    position: relative;
-    display: block;
-    max-height: 50.00000000vw;
-    overflow: hidden;
-    grid-row: 1/3;
-    border-radius : 0.52083333vw;
-    width: 36.45833333vw;
-    height: 32.29166667vw;
-  }
-  .news-box-1:hover .news-bg {
-    transform: rotate(2deg) scale(1.1);
-    opacity: 0.9;
-  }
-  .news-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  .news-bg-1 {
-    display: block;
-    width: 36.45833333vw;
-    height: 32.29166667vw;
-    background: url("../images/news_img1.jpg") no-repeat center;
-    background-size: cover;
-    transition: all 0.5s;
-    border-radius: 0.52083333vw;
-    cursor: pointer;
-  }
-  .news-box-2 {
-    position: relative;
-    overflow: hidden;
-    border-radius : 0.52083333vw;
-  }
-  .news-box-2:hover .news-bg {
-    transform: rotate(2deg) scale(1.1);
-    opacity: 0.9;
-  }
-  .news-bg-2 {
-    display: block;
-    width: 36.45833333vw;
-    height: 15.62500000vw;
-    background: url("../images/news_img2.jpg") no-repeat bottom;
-    background-size: cover;
-    transition: all 0.5s;
-    border-radius: 0.52083333vw;
-    cursor: pointer;
-  }
-  .news-box-3 {
-    position: relative;
-    overflow: hidden;
-    border-radius: 0.52083333vw;
-  }
-  .news-box-3:hover .news-bg {
-    transform: rotate(2deg) scale(1.1);
-    opacity: 0.9;
-  }
-  .news-bg-3 {
-    display: block;
-    width: 36.45833333vw;
-    height: 15.62500000vw;
-    background: url("../images/news_img3.jpg") no-repeat center;
-    background-size: cover;
-    transition: all 0.5s;
-    border-radius: 0.52083333vw;
-    cursor: pointer;
-  }
+  position: relative;
+  display: block;
+  background-color: #fff;
+}
+.news .inner {
+  width: 76.04166667vw;
+  height: 50vw;
+}
+.news-title {
+  font-family: "NanumSquareRound";
+  text-align: center;
+  font-size: 3.64583333vw;
+  padding: 2.60416667vw 0vw 2.60416667vw 0vw;
+  color: #4867ca;
+}
+.news-title span {
+  color: #4867ca;
+  font-family: "yg-jalnan";
+}
+.news-wrap {
+  width: calc(100% - 1.04166667vw * 2);
+  margin: 0 auto;
+  max-width: 76.04166667vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-auto-rows: minmax(50px, auto); */
+  gap: 1.04166667vw;
+}
+.news-box-1 {
+  position: relative;
+  display: block;
+  max-height: 50vw;
+  overflow: hidden;
+  grid-row: 1/3;
+  border-radius: 0.52083333vw;
+  width: 36.45833333vw;
+  height: 32.29166667vw;
+}
+.news-box-1:hover .news-bg {
+  transform: rotate(2deg) scale(1.1);
+  opacity: 0.9;
+}
+.news-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.news-bg-1 {
+  display: block;
+  width: 36.45833333vw;
+  height: 32.29166667vw;
+  background: url("../images/news_img1.jpg") no-repeat center;
+  background-size: cover;
+  transition: all 0.5s;
+  border-radius: 0.52083333vw;
+  cursor: pointer;
+}
+.news-box-2 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.52083333vw;
+}
+.news-box-2:hover .news-bg {
+  transform: rotate(2deg) scale(1.1);
+  opacity: 0.9;
+}
+.news-bg-2 {
+  display: block;
+  width: 36.45833333vw;
+  height: 15.625vw;
+  background: url("../images/news_img2.jpg") no-repeat bottom;
+  background-size: cover;
+  transition: all 0.5s;
+  border-radius: 0.52083333vw;
+  cursor: pointer;
+}
+.news-box-3 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.52083333vw;
+}
+.news-box-3:hover .news-bg {
+  transform: rotate(2deg) scale(1.1);
+  opacity: 0.9;
+}
+.news-bg-3 {
+  display: block;
+  width: 36.45833333vw;
+  height: 15.625vw;
+  background: url("../images/news_img3.jpg") no-repeat center;
+  background-size: cover;
+  transition: all 0.5s;
+  border-radius: 0.52083333vw;
+  cursor: pointer;
+}

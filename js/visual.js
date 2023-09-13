@@ -1,13 +1,13 @@
 // 비주얼 슬라이드 기능
 $(document).ready(function () {
-const swVisual = new Swiper(".sw-visual", {
-  loop: true,
-  speed: 1000,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
-});
+  const swVisual = new Swiper(".sw-visual", {
+    loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+    },
+  });
   // 1.슬라이드 (.swiper-slide)개수 만큼 li생성하기
   const swSlideCount = document.querySelectorAll(
     ".sw-visual .swiper-slide"

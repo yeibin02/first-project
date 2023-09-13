@@ -21,9 +21,9 @@ html {
   font-size: 16px;
   -ms-overflow-style: none;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 body {
-  scroll-behavior: smooth; /* 부드러운 스크롤 활성화 */
   font-family: "NanumSquareRound";
   font-size: 1rem;
   /* background-color: #fffcc9; */
@@ -36,11 +36,10 @@ body {
   color: #000;
   font-weight: 400;
 }
-.wrap{
+.wrap {
   position: relative;
 }
 /* SCROLL */
 ::-webkit-scrollbar {
   width: 0px;
 }
-
